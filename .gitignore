@@ -5,3 +5,4 @@ fish/.config/fish/fish_variables
 # ignore folder
 fish/.config/fish/functions
 !fish/.config/fish/functions/delete.fish
+!fish/.config/fish/functions/lp.fish
