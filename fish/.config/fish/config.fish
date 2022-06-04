@@ -1,5 +1,5 @@
 # Add to PATH
-set PATH $PATH /opt/homebrew/bin
+set PATH $PATH /opt/homebrew/bin $HOME/.cargo/bin
 
 # Alias
 alias l="exa -al -s=type --icons --no-user"
