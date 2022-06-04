@@ -1,6 +1,6 @@
 # .dotfiles2
 
-The successor of `solvedbiscuit71/.dotfiles` with focus on simplicity and ease of use.
+The successor of **solvedbiscuit71/.dotfiles** with focus on simplicity and ease of use.
 check out: https://github.com/solvedbiscuit71/.dotfiles
 
 # prerequisite
