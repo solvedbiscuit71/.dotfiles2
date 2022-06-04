@@ -34,6 +34,20 @@ check out: https://www.nerdfonts.com/font-downloads
 /opt/homebrew/bin/brew install --cask font-victor-mono-nerd-font
 ```
 
+## fzf
+
+fzf (fuzzy finder) useful for searching a list of items (uses grep internally)  
+uses:
+* `C-t` finding files
+* `C-r` finding recent commands
+* `lp` list projects using fzf
+
+install by,
+```sh
+git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+~/.fzf/install
+```
+
 ## configuration
 
 Cloning .dotfiles2 to your system
