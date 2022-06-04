@@ -1,53 +1,63 @@
-# .dotfiles2
+# Dotfiles2
 
-The successor of **solvedbiscuit71/.dotfiles** with focus on simplicity and ease of use.
-check out: https://github.com/solvedbiscuit71/.dotfiles
+This is a successor of my previous .dotfiles repository which aims to simplify things.
 
-# prerequisite
+## prerequisite
 
-Xcode need to be install in-case of macos.
+For MacOs (only)
 ```sh
 xcode-select --install
 ```
 
-and, then install HomeBrew
+HomeBrew (Package Manager)
 ```sh
 /bin/zsh -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
 
-**NOTE**: If the brew is not avaiable in the path substitute `brew` with `/opt/homebrew/bin/brew`
-
 # installation
 
-Here, we are using **fish.sh** as our shell instead of **zsh** and also we are using alacritty
-
+Installing fish.sh (shell) and alacritty (terimal emulator)
 ```sh
-brew install fish
-brew install --cask alacritty
+/opt/homebrew/bin/brew install fish
+/opt/homebrew/bin/brew install --cask alacritty
 ```
 
-To make, fish.sh as your default shell
+Setting default to fish.sh
 ```sh
 echo /opt/homebrew/bin/fish | sudo tee -a /etc/shells
 chsh -s /opt/homebrew/bin/fish
 ```
 
-# nerdfont
+## nerdfont
 
-Here, we have many variant of nerdfont
+Installing nerdfont (support icons)
 check out: https://www.nerdfonts.com/font-downloads
 
 ```sh
-brew tap homebrew/cask-fonts
-brew install --cask font-victor-mono-nerd-font
+/opt/homebrew/bin/brew tap homebrew/cask-fonts
+/opt/homebrew/bin/brew install --cask font-victor-mono-nerd-font
 ```
 
-Others: replace `victor-mono` with your font name in kebab-case
+## configuration
 
-# clone
-
+Cloning .dotfiles2 to your system
 ```sh
 git clone https://github.com/solvedbiscuit71/.dotfiles2.git ~/.dotfiles2
 ```
 
-After cloning, run `stow <folder-name>` to install && `stow -D <folder-name>` to remove settings.
+and, run
+```sh
+~/.dotfiles2/install.sh
+```
+
+or
+```sh
+~/.dotfiles2/remove.sh
+```
+
+NOTE:  
+if you encounter access denied when running `~/.dotfiles/<name>.sh`
+```sh
+cd ~/.dotfiles2
+chmod 744 install.sh remove.sh
+```
