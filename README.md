@@ -1,8 +1,4 @@
-# Dotfiles2
-
-This is a successor of my previous .dotfiles repository which aims to simplify things.
-
-## prerequisite
+# prerequisite
 
 For MacOs (only)
 ```sh
