@@ -1,0 +1,42 @@
+# Configuration for Alacritty, the GPU enhanced terminal emulator.
+# visit: https://github.com/alacritty/alacritty/blob/master/alacritty.yml
+
+# Window Setting
+window:
+  dimensions:
+    columns: 80
+    lines: 24
+
+  padding:
+    x: 5
+    y: 5
+
+  title: Alacritty
+  opacity: .8
+  decorations: buttonless
+  startup_mode: SimpleFullscreen
+
+# Mouse Setting
+mouse:
+  hide_when_typing: true
+
+# Fonts Setting
+font:
+  size: 15
+  use_thin_strokes: true
+  builtin_box_drawing: true
+
+  normal:
+    family: VictorMono Nerd Font Mono
+    style: Regular
+  bold:
+    family: VictorMono Nerd Font Mono
+    style: SemiBold
+  italic:
+    family: VictorMono Nerd Font Mono
+    style: Oblique
+  bold_italic:
+    family: VictorMono Nerd Font Mono
+    style: SemiBold Oblique
+
+draw_bold_text_with_bright_colors: true
