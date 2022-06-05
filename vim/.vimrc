@@ -59,7 +59,6 @@ nnoremap L $
 
 nnoremap <silent> cd :lcd %:h<CR>
 nnoremap <silent> <C-n> :Ex<CR>
-nnoremap <silent> <C-e> :! lp<CR>
 
 nnoremap <silent> <C-t> :tabnew<CR>
 nnoremap <silent> <leader>tc :tabnew<CR>:lcd ~/Code/<CR>
