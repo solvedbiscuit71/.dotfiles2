@@ -9,6 +9,7 @@ function lp
 
   if [ "$folder" ]
     set folder_name (basename $folder)
+    set folder_name (string replace "." "_" $folder_name)
     tmux has-session -t=$folder_name 2> /dev/null
 
     if [ "$status" = "0" ]
