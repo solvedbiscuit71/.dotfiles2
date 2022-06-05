@@ -4,7 +4,7 @@ function lp
   if [ "$argv[1]" = "." ]
     set folder $PWD
   else
-    set folder (find ~/Code ~/.dotfiles2 ~/.dotfiles2/fish/.config/fish  -maxdepth 1 -type d | fzf)
+    set folder (find ~/Code ~/.dotfiles2 -maxdepth 2 -type d -not -path "*/.git/*" | fzf)
   end
 
   if [ "$folder" ]
