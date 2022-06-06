@@ -21,4 +21,7 @@ for folder in */
   /opt/homebrew/bin/stow $folder
 end
 
+# creating symlink for fzf_key_bindings
+ln -s ~/.fzf/shell/key-bindings.fish ~/.dotfiles2/fish/.config/fish/functions/fzf_key_bindings.fish 2> /dev/null
+
 exit 0

@@ -48,6 +48,12 @@ git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 ~/.fzf/install
 ```
 
+NOTE:  
+If, the keybinding or fzf failed to work after setting up the configuration try,
+```sh
+~/.fzf/install
+```
+
 ## configuration
 
 Cloning .dotfiles2 to your system
