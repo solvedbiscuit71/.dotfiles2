@@ -56,6 +56,7 @@ nnoremap <C-k> <C-u>
 
 nnoremap H ^
 nnoremap L $
+nnoremap Y y$
 
 nnoremap <silent> cd :lcd %:h<CR>
 nnoremap <silent> <C-n> :Ex<CR>
