@@ -12,8 +12,6 @@ set noshowmode
 set noswapfile
 set number relativenumber
 set scrolloff=10
-set smartindent
-set smarttab
 set shiftwidth=2
 set tabstop=2
 set termguicolors
