@@ -1,8 +1,6 @@
 # ignore file
 .DS_Store
-fish/.config/fish/fish_variables
 
-# ignore folder
-fish/.config/fish/functions/*
-!fish/.config/fish/functions/delete.fish
-!fish/.config/fish/functions/lp.fish
+# ignore defaults
+fish/.config/fish/functions/fzf_key_bindings.fish
+fish/.config/fish/fish_variables
