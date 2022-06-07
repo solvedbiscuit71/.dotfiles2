@@ -58,9 +58,6 @@
   "terminal.integrated.profiles.osx": {
     "fish": {
       "path": "/opt/homebrew/bin/fish"
-      // "args": [
-      //   "-c lp .",
-      // ]
     }
   },
   "vim.easymotion": true,
