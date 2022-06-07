@@ -24,6 +24,7 @@ let g:lightline = { 'colorscheme': 'apprentice' }
 " Vim-Plug
 call plug#begin('~/.vim/plugged')
   Plug 'itchyny/lightline.vim'
+  Plug 'bling/vim-bufferline'
 
   Plug 'lifepillar/vim-gruvbox8'
   Plug 'ryanoasis/vim-devicons'
@@ -57,15 +58,10 @@ nnoremap L $
 nnoremap Y y$
 
 nnoremap <silent> cd :lcd %:h<CR>
-nnoremap <silent> <C-n> :Ex<CR>
+nnoremap <silent> <leader>n :Ex<CR>
 
-nnoremap <silent> <C-t> :tabnew<CR>
-nnoremap <silent> <leader>tc :tabnew<CR>:lcd ~/Code/<CR>
-nnoremap <silent> <leader>td :tabnew<CR>:lcd ~/.dotfiles2/<CR>
-
-nnoremap <silent> <C-c> :tabclose<CR>
-nnoremap <silent> <C-h> :tabprevious<CR>
-nnoremap <silent> <C-l> :tabnext<CR>
+nnoremap <silent> <C-h> :bprevious<CR>
+nnoremap <silent> <C-l> :bnext<CR>
 
 nnoremap <expr> k (v:count > 5 ? "m'" . v:count : "") . 'k'
 nnoremap <expr> j (v:count > 5 ? "m'" . v:count : "") . 'j'
