@@ -1,0 +1,205 @@
+{
+  "editor.acceptSuggestionOnEnter": "off",
+  "editor.bracketPairColorization.enabled": false,
+  "editor.codeLensFontFamily": "Victor Mono",
+  "editor.cursorBlinking": "smooth",
+  "editor.fontFamily": "Victor Mono",
+  "editor.fontLigatures": true,
+  "editor.fontSize": 14.5,
+  "editor.formatOnSave": true,
+  "editor.lineNumbers": "relative",
+  "editor.minimap.enabled": false,
+  "editor.quickSuggestionsDelay": 0,
+  "editor.scrollBeyondLastLine": false,
+  "editor.tabSize": 2,
+  "emmet.includeLanguages": {
+    "svelte": "html"
+  },
+  "[rust]": {
+    "editor.defaultFormatter": "rust-lang.rust-analyzer",
+    "editor.tabSize": 4
+  },
+  "[svelte]": {
+    "editor.defaultFormatter": "svelte.svelte-vscode"
+  },
+  "errorLens.delay": 0,
+  "errorLens.fontFamily": "Victor Mono",
+  "errorLens.fontSize": "13",
+  "errorLens.enabledDiagnosticLevels": [
+    "error"
+  ],
+  "explorer.autoReveal": false,
+  "explorer.compactFolders": false,
+  "explorer.confirmDelete": false,
+  "explorer.confirmDragAndDrop": false,
+  "files.exclude": {
+    "**/node_modules": true,
+    "**/target": true,
+    "**/*.lock": true,
+    "**/*-lock.*": true
+  },
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "projectManager.git.baseFolders": [
+    "~/Code",
+    "~/.dotfiles2"
+  ],
+  "rust-analyzer.checkOnSave.enable": true,
+  "rust-analyzer.inlayHints.parameterHints.enable": false,
+  "rust-analyzer.inlayHints.closingBraceHints.enable": false,
+  "rust-analyzer.inlayHints.chainingHints.enable": false,
+  "svelte.enable-ts-plugin": true,
+  "terminal.integrated.confirmOnKill": "never",
+  "terminal.integrated.cursorBlinking": true,
+  "terminal.integrated.fontFamily": "VictorMono Nerd Font Mono",
+  "terminal.integrated.fontSize": 13,
+  "terminal.integrated.macOptionIsMeta": true,
+  "terminal.integrated.defaultProfile.osx": "fish",
+  "terminal.integrated.persistentSessionReviveProcess": "never",
+  "terminal.integrated.profiles.osx": {
+    "fish": {
+      "path": "/opt/homebrew/bin/fish"
+      // "args": [
+      //   "-c lp .",
+      // ]
+    }
+  },
+  "vim.easymotion": true,
+  "vim.incsearch": true,
+  "vim.useSystemClipboard": false,
+  "vim.useCtrlKeys": true,
+  "vim.hlsearch": false,
+  "vim.normalModeKeyBindings": [
+    {
+      "before": [
+        "<C-l>"
+      ],
+      "commands": [
+        "workbench.action.nextEditor"
+      ],
+      "silent": true
+    },
+    {
+      "before": [
+        "<C-h>"
+      ],
+      "commands": [
+        "workbench.action.previousEditor"
+      ],
+      "silent": true
+    },
+    {
+      "before": [
+        "<leader>",
+        "n"
+      ],
+      "commands": [
+        "workbench.view.explorer"
+      ],
+      "silent": true
+    },
+    {
+      "before": [
+        "<leader>",
+        "f"
+      ],
+      "commands": [
+        "workbench.action.quickOpen"
+      ],
+      "silent": true
+    },
+    {
+      "before": [
+        "<leader>",
+        "."
+      ],
+      "commands": [
+        "workbench.action.openSettingsJson"
+      ],
+      "silent": true
+    }
+  ],
+  "vim.visualModeKeyBindings": [
+    {
+      "before": [
+        ">"
+      ],
+      "after": [
+        ">",
+        "g",
+        "v"
+      ]
+    },
+    {
+      "before": [
+        "<"
+      ],
+      "after": [
+        "<",
+        "g",
+        "v"
+      ]
+    },
+    {
+      "before": [
+        "<C-j>"
+      ],
+      "after": [
+        "<C-d>"
+      ]
+    },
+    {
+      "before": [
+        "<C-k>"
+      ],
+      "after": [
+        "<C-u>"
+      ]
+    }
+  ],
+  "vim.normalModeKeyBindingsNonRecursive": [
+    {
+      "before": [
+        "H"
+      ],
+      "after": [
+        "_"
+      ]
+    },
+    {
+      "before": [
+        "L"
+      ],
+      "after": [
+        "$"
+      ]
+    },
+    {
+      "before": [
+        "<C-j>"
+      ],
+      "after": [
+        "<C-d>"
+      ]
+    },
+    {
+      "before": [
+        "<C-k>"
+      ],
+      "after": [
+        "<C-u>"
+      ]
+    }
+  ],
+  "vim.leader": "<space>",
+  "workbench.colorTheme": "Aldrico's Gruvbox",
+  "workbench.iconTheme": "gruvbox-material-icon-theme",
+  "workbench.colorCustomizations": {
+    "editorError.foreground": "#00000000",
+    "editorWarning.foreground": "#00000000",
+    "editorOverviewRuler.errorForeground": "#00000000",
+    "editorOverviewRuler.warningForeground": "#00000000"
+  },
+  "workbench.productIconTheme": "material-product-icons",
+  "workbench.sideBar.location": "right",
+  "workbench.startupEditor": "none"
+}
