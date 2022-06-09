@@ -190,15 +190,6 @@
     },
     {
       "before": [
-        "S"
-      ],
-      "commands": [
-        "editor.action.selectHighlights"
-      ],
-      "silent": true
-    },
-    {
-      "before": [
         "<C-j>"
       ],
       "after": [
