@@ -31,7 +31,7 @@ check out: https://www.nerdfonts.com/font-downloads
 
 ```sh
 /opt/homebrew/bin/brew tap homebrew/cask-fonts
-/opt/homebrew/bin/brew install --cask font-victor-mono-nerd-font
+/opt/homebrew/bin/brew install --cask font-iosevka-nerd-font
 ```
 
 ## fzf
