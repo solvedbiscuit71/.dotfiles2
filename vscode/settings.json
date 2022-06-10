@@ -1,11 +1,13 @@
 {
+  "C_Cpp.autocompleteAddParentheses": true,
   "editor.acceptSuggestionOnEnter": "off",
   "editor.bracketPairColorization.enabled": false,
-  "editor.codeLensFontFamily": "Victor Mono",
+  "editor.codeLensFontFamily": "Iosevka Nerd Font",
   "editor.cursorBlinking": "smooth",
-  "editor.fontFamily": "Victor Mono",
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.fontFamily": "Iosevka Nerd Font",
   "editor.fontLigatures": true,
-  "editor.fontSize": 14,
+  "editor.fontSize": 15,
   "editor.formatOnSave": true,
   "editor.lineNumbers": "relative",
   "editor.minimap.enabled": false,
@@ -15,6 +17,10 @@
   "emmet.includeLanguages": {
     "svelte": "html"
   },
+  "[cpp]": {
+    "editor.defaultFormatter": "ms-vscode.cpptools",
+    "editor.tabSize": 4
+  },
   "[rust]": {
     "editor.defaultFormatter": "rust-lang.rust-analyzer",
     "editor.tabSize": 4
@@ -23,11 +29,9 @@
     "editor.defaultFormatter": "svelte.svelte-vscode"
   },
   "errorLens.delay": 0,
-  "errorLens.fontFamily": "Victor Mono",
-  "errorLens.fontSize": "13",
-  "errorLens.enabledDiagnosticLevels": [
-    "error"
-  ],
+  "errorLens.fontFamily": "Iosevka Nerd Font",
+  "errorLens.fontSize": "15",
+  "errorLens.enabledDiagnosticLevels": ["error"],
   "explorer.autoReveal": false,
   "explorer.compactFolders": false,
   "explorer.confirmDelete": false,
@@ -36,13 +40,11 @@
     "**/node_modules": true,
     "**/target": true,
     "**/*.lock": true,
-    "**/*-lock.*": true
+    "**/*-lock.*": true,
+    "**/*.out*": true
   },
   "javascript.updateImportsOnFileMove.enabled": "always",
-  "projectManager.git.baseFolders": [
-    "~/Code",
-    "~/.dotfiles2"
-  ],
+  "projectManager.git.baseFolders": ["~/Code", "~/.dotfiles2"],
   "rust-analyzer.checkOnSave.enable": true,
   "rust-analyzer.inlayHints.parameterHints.enable": false,
   "rust-analyzer.inlayHints.closingBraceHints.enable": false,
@@ -50,8 +52,8 @@
   "svelte.enable-ts-plugin": true,
   "terminal.integrated.confirmOnKill": "never",
   "terminal.integrated.cursorBlinking": true,
-  "terminal.integrated.fontFamily": "VictorMono Nerd Font Mono",
-  "terminal.integrated.fontSize": 14,
+  "terminal.integrated.fontFamily": "Iosevka Nerd Font Mono",
+  "terminal.integrated.fontSize": 15,
   "terminal.integrated.macOptionIsMeta": true,
   "terminal.integrated.defaultProfile.osx": "fish",
   "terminal.integrated.persistentSessionReviveProcess": "never",
@@ -71,190 +73,100 @@
   "vim.visualstar": true,
   "vim.normalModeKeyBindings": [
     {
-      "before": [
-        "<C-l>"
-      ],
-      "commands": [
-        "workbench.action.nextEditor"
-      ],
+      "before": ["<C-l>"],
+      "commands": ["workbench.action.nextEditor"],
       "silent": true
     },
     {
-      "before": [
-        "<C-h>"
-      ],
-      "commands": [
-        "workbench.action.previousEditor"
-      ],
+      "before": ["<C-h>"],
+      "commands": ["workbench.action.previousEditor"],
       "silent": true
     },
     {
-      "before": [
-        "<leader>",
-        "n"
-      ],
-      "commands": [
-        "workbench.view.explorer"
-      ],
+      "before": ["<leader>", "n"],
+      "commands": ["workbench.view.explorer"],
       "silent": true
     },
     {
-      "before": [
-        "<leader>",
-        "f"
-      ],
-      "commands": [
-        "workbench.action.quickOpen"
-      ],
+      "before": ["<leader>", "f"],
+      "commands": ["workbench.action.quickOpen"],
       "silent": true
     },
     {
-      "before": [
-        "<leader>",
-        "."
-      ],
-      "commands": [
-        "workbench.action.openSettingsJson"
-      ],
+      "before": ["<leader>", "."],
+      "commands": ["workbench.action.openSettingsJson"],
       "silent": true
     },
     {
-      "before": [
-        "g",
-        "h"
-      ],
-      "commands": [
-        "editor.action.quickFix"
-      ],
+      "before": ["g", "h"],
+      "commands": ["editor.action.quickFix"],
       "silent": true
     },
     {
-      "before": [
-        "R"
-      ],
-      "commands": [
-        "editor.action.rename"
-      ],
+      "before": ["R"],
+      "commands": ["editor.action.rename"],
       "silent": true
     },
     {
-      "before": [
-        "K"
-      ],
-      "commands": [
-        "editor.action.showHover"
-      ],
+      "before": ["K"],
+      "commands": ["editor.action.showHover"],
       "silent": true
     },
     {
-      "before": [
-        "]",
-        "d"
-      ],
-      "commands": [
-        "editor.action.marker.nextInFiles"
-      ],
+      "before": ["]", "d"],
+      "commands": ["editor.action.marker.nextInFiles"],
       "silent": true
     },
     {
-      "before": [
-        "[",
-        "d"
-      ],
-      "commands": [
-        "editor.action.marker.prevInFiles"
-      ],
+      "before": ["[", "d"],
+      "commands": ["editor.action.marker.prevInFiles"],
       "silent": true
     }
   ],
   "vim.visualModeKeyBindings": [
     {
-      "before": [
-        ">"
-      ],
-      "after": [
-        ">",
-        "g",
-        "v"
-      ]
+      "before": [">"],
+      "after": [">", "g", "v"]
     },
     {
-      "before": [
-        "<"
-      ],
-      "after": [
-        "<",
-        "g",
-        "v"
-      ]
+      "before": ["<"],
+      "after": ["<", "g", "v"]
     },
     {
-      "before": [
-        "<C-j>"
-      ],
-      "after": [
-        "<C-d>"
-      ]
+      "before": ["<C-j>"],
+      "after": ["<C-d>"]
     },
     {
-      "before": [
-        "<C-k>"
-      ],
-      "after": [
-        "<C-u>"
-      ]
+      "before": ["<C-k>"],
+      "after": ["<C-u>"]
     }
   ],
   "vim.normalModeKeyBindingsNonRecursive": [
     {
-      "before": [
-        "H"
-      ],
-      "after": [
-        "_"
-      ]
+      "before": ["H"],
+      "after": ["_"]
     },
     {
-      "before": [
-        "L"
-      ],
-      "after": [
-        "$"
-      ]
+      "before": ["L"],
+      "after": ["$"]
     },
     {
-      "before": [
-        "<C-j>"
-      ],
-      "after": [
-        "<C-d>"
-      ]
+      "before": ["<C-j>"],
+      "after": ["<C-d>"]
     },
     {
-      "before": [
-        "<C-k>"
-      ],
-      "after": [
-        "<C-u>"
-      ]
+      "before": ["<C-k>"],
+      "after": ["<C-u>"]
     }
   ],
   "vim.operatorPendingModeKeyBindings": [
     {
-      "before": [
-        "H"
-      ],
-      "after": [
-        "_"
-      ]
+      "before": ["H"],
+      "after": ["_"]
     },
     {
-      "before": [
-        "L"
-      ],
-      "after": [
-        "$"
-      ]
+      "before": ["L"],
+      "after": ["$"]
     }
   ],
   "vim.leader": "<space>",
