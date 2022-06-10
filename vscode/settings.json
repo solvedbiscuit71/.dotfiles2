@@ -170,6 +170,7 @@
     }
   ],
   "vim.leader": "<space>",
+  "workbench.activityBar.visible": false,
   "workbench.colorTheme": "Aldrico's Gruvbox",
   "workbench.iconTheme": "gruvbox-material-icon-theme",
   "workbench.colorCustomizations": {
@@ -180,5 +181,6 @@
   },
   "workbench.productIconTheme": "material-product-icons",
   "workbench.sideBar.location": "right",
+  "workbench.statusBar.visible": false,
   "workbench.startupEditor": "none"
 }
