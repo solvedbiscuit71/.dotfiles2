@@ -18,6 +18,11 @@ end
 
 # creating links
 for folder in */
+  if [ $folder = "vscode/" ]
+    continue
+  end
+
+  echo "stow $folder"
   /opt/homebrew/bin/stow $folder
 end
 
