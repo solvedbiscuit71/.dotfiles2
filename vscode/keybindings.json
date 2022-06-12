@@ -116,16 +116,7 @@
     "command": "-workbench.action.previousEditor"
   },
   {
-    "key": "ctrl+`",
-    "command": "workbench.action.terminal.toggleTerminal"
-  },
-  {
-    "key": "space .",
-    "command": "workbench.action.openSettingsJson",
-    "when": "!editorTextFocus && !inputFocus"
-  },
-  {
-    "key": "cmd+p",
+    "key": "shift+cmd+r",
     "command": "projectManager.listProjects"
   },
   {
@@ -146,10 +137,6 @@
     "command": "-workbench.action.openRecent"
   },
   {
-    "key": "cmd+.",
-    "command": "workbench.action.showCommands"
-  },
-  {
     "key": "shift+cmd+p",
     "command": "-workbench.action.showCommands"
   },
@@ -168,5 +155,13 @@
   {
     "key": "cmd+h",
     "command": "workbench.action.toggleAuxiliaryBar"
+  },
+  {
+    "key": "cmd+p",
+    "command": "workbench.action.showCommands"
+  },
+  {
+    "key": "ctrl+`",
+    "command": "workbench.action.terminal.toggleTerminal"
   }
 ]

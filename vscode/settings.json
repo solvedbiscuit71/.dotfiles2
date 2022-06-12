@@ -1,5 +1,12 @@
 {
   "C_Cpp.autocompleteAddParentheses": true,
+  "C_Cpp.formatting": "vcFormat",
+  "C_Cpp.vcFormat.newLine.beforeOpenBrace.block": "sameLine",
+  "C_Cpp.vcFormat.newLine.beforeOpenBrace.function": "sameLine",
+  "C_Cpp.vcFormat.newLine.beforeOpenBrace.lambda": "sameLine",
+  "C_Cpp.vcFormat.newLine.beforeOpenBrace.namespace": "sameLine",
+  "C_Cpp.vcFormat.newLine.beforeOpenBrace.type": "sameLine",
+  "C_Cpp.vcFormat.newLine.closeBraceSameLine.emptyFunction": true,
   "editor.acceptSuggestionOnEnter": "off",
   "editor.bracketPairColorization.enabled": false,
   "editor.codeLensFontFamily": "Iosevka Nerd Font",
@@ -54,6 +61,7 @@
   "terminal.integrated.cursorBlinking": true,
   "terminal.integrated.fontFamily": "Iosevka Nerd Font Mono",
   "terminal.integrated.fontSize": 15,
+  "terminal.integrated.enableMultiLinePasteWarning": false,
   "terminal.integrated.macOptionIsMeta": true,
   "terminal.integrated.defaultProfile.osx": "fish",
   "terminal.integrated.persistentSessionReviveProcess": "never",
@@ -90,11 +98,6 @@
     {
       "before": ["<leader>", "f"],
       "commands": ["workbench.action.quickOpen"],
-      "silent": true
-    },
-    {
-      "before": ["<leader>", "."],
-      "commands": ["workbench.action.openSettingsJson"],
       "silent": true
     },
     {
@@ -181,6 +184,5 @@
   },
   "workbench.productIconTheme": "material-product-icons",
   "workbench.sideBar.location": "right",
-  "workbench.statusBar.visible": false,
   "workbench.startupEditor": "none"
 }
