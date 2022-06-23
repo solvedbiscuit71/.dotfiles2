@@ -1,20 +1,18 @@
 {
+  "code-runner.runInTerminal": true,
+  "code-runner.saveFileBeforeRun": true,
+  "code-runner.executorMap": {
+    "cpp": "run_c $fullFileName"
+  },
   "C_Cpp.autocompleteAddParentheses": true,
-  "C_Cpp.formatting": "vcFormat",
-  "C_Cpp.vcFormat.newLine.beforeOpenBrace.block": "sameLine",
-  "C_Cpp.vcFormat.newLine.beforeOpenBrace.function": "sameLine",
-  "C_Cpp.vcFormat.newLine.beforeOpenBrace.lambda": "sameLine",
-  "C_Cpp.vcFormat.newLine.beforeOpenBrace.namespace": "sameLine",
-  "C_Cpp.vcFormat.newLine.beforeOpenBrace.type": "sameLine",
-  "C_Cpp.vcFormat.newLine.closeBraceSameLine.emptyFunction": true,
   "editor.acceptSuggestionOnEnter": "off",
   "editor.bracketPairColorization.enabled": false,
   "editor.codeLensFontFamily": "Iosevka Nerd Font",
-  "editor.cursorBlinking": "smooth",
+  "editor.cursorBlinking": "solid",
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.fontFamily": "Iosevka Nerd Font",
   "editor.fontLigatures": true,
-  "editor.fontSize": 15,
+  "editor.fontSize": 14,
   "editor.formatOnSave": true,
   "editor.lineNumbers": "relative",
   "editor.minimap.enabled": false,
@@ -37,7 +35,7 @@
   },
   "errorLens.delay": 0,
   "errorLens.fontFamily": "Iosevka Nerd Font",
-  "errorLens.fontSize": "15",
+  "errorLens.fontSize": "14",
   "errorLens.enabledDiagnosticLevels": ["error"],
   "explorer.autoReveal": false,
   "explorer.compactFolders": false,
@@ -60,7 +58,7 @@
   "terminal.integrated.confirmOnKill": "never",
   "terminal.integrated.cursorBlinking": true,
   "terminal.integrated.fontFamily": "Iosevka Nerd Font Mono",
-  "terminal.integrated.fontSize": 15,
+  "terminal.integrated.fontSize": 14,
   "terminal.integrated.enableMultiLinePasteWarning": false,
   "terminal.integrated.macOptionIsMeta": true,
   "terminal.integrated.defaultProfile.osx": "fish",
@@ -101,27 +99,27 @@
       "silent": true
     },
     {
+      "before": ["<leader>", "r"],
+      "commands": ["code-runner.run"],
+      "silent": true
+    },
+    {
       "before": ["g", "h"],
-      "commands": ["editor.action.quickFix"],
-      "silent": true
-    },
-    {
-      "before": ["R"],
-      "commands": ["editor.action.rename"],
-      "silent": true
-    },
-    {
-      "before": ["K"],
       "commands": ["editor.action.showHover"],
       "silent": true
     },
     {
-      "before": ["]", "d"],
+      "before": ["g", "r"],
+      "commands": ["editor.action.rename"],
+      "silent": true
+    },
+    {
+      "before": ["<C-n>"],
       "commands": ["editor.action.marker.nextInFiles"],
       "silent": true
     },
     {
-      "before": ["[", "d"],
+      "before": ["<C-p>"],
       "commands": ["editor.action.marker.prevInFiles"],
       "silent": true
     }
@@ -134,54 +132,12 @@
     {
       "before": ["<"],
       "after": ["<", "g", "v"]
-    },
-    {
-      "before": ["<C-j>"],
-      "after": ["<C-d>"]
-    },
-    {
-      "before": ["<C-k>"],
-      "after": ["<C-u>"]
-    }
-  ],
-  "vim.normalModeKeyBindingsNonRecursive": [
-    {
-      "before": ["H"],
-      "after": ["_"]
-    },
-    {
-      "before": ["L"],
-      "after": ["$"]
-    },
-    {
-      "before": ["<C-j>"],
-      "after": ["<C-d>"]
-    },
-    {
-      "before": ["<C-k>"],
-      "after": ["<C-u>"]
-    }
-  ],
-  "vim.operatorPendingModeKeyBindings": [
-    {
-      "before": ["H"],
-      "after": ["_"]
-    },
-    {
-      "before": ["L"],
-      "after": ["$"]
     }
   ],
   "vim.leader": "<space>",
   "workbench.activityBar.visible": false,
   "workbench.colorTheme": "Aldrico's Gruvbox",
   "workbench.iconTheme": "gruvbox-material-icon-theme",
-  "workbench.colorCustomizations": {
-    "editorError.foreground": "#00000000",
-    "editorWarning.foreground": "#00000000",
-    "editorOverviewRuler.errorForeground": "#00000000",
-    "editorOverviewRuler.warningForeground": "#00000000"
-  },
   "workbench.productIconTheme": "material-product-icons",
   "workbench.sideBar.location": "right",
   "workbench.startupEditor": "none"
