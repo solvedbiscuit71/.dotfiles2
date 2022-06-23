@@ -18,10 +18,9 @@ set termguicolors
 set timeoutlen=1000 ttimeoutlen=0
 set wildmenu
 
-" Vim-Plug-Setting
 let g:lightline = { 'colorscheme': 'apprentice' }
 
-" Vim-Plug
+" Plugins
 call plug#begin('~/.vim/plugged')
   Plug 'itchyny/lightline.vim'
   Plug 'bling/vim-bufferline'
@@ -41,25 +40,19 @@ call plug#begin('~/.vim/plugged')
   Plug 'vim-scripts/ReplaceWithRegister'
 call plug#end()
 
-" Vim-colorscheme
+" Color theme
 colorscheme gruvbox8_hard
-
-" Vim-transparent-bg (comment line below to disable)
 hi Normal guibg=NONE ctermbg=NONE
 
-" Vim-Keymaps
+" Keybindings
 let g:mapleader = ' '
 
-nnoremap <C-j> <C-d>
-nnoremap <C-k> <C-u>
-
-nnoremap H ^
-nnoremap L $
 nnoremap Y y$
+vnoremap > >gv
+vnoremap < <gv
 
 nnoremap <silent> cd :lcd %:h<CR>
 nnoremap <silent> <leader>n :Ex<CR>
-
 nnoremap <silent> <C-h> :bprevious<CR>
 nnoremap <silent> <C-l> :bnext<CR>
 
