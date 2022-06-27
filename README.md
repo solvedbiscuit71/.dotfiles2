@@ -1,4 +1,4 @@
-# prerequisite
+# Prerequisite
 
 For MacOs (only)
 ```sh
@@ -10,7 +10,7 @@ HomeBrew (Package Manager)
 /bin/zsh -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
 
-# installation
+# Installation
 
 Installing fish.sh (shell) and alacritty (terimal emulator)
 ```sh
@@ -24,14 +24,12 @@ echo /opt/homebrew/bin/fish | sudo tee -a /etc/shells
 chsh -s /opt/homebrew/bin/fish
 ```
 
-## font family
+Installing font family,  
 
-Here, we are using **Iosevka Term Curly** which is part of Iosevka Family.  
+(Iosevka Term Curly) which is a part of (Iosevka Curly) is being used for alacritty.  
+Download: https://typeof.net/Iosevka/
 
-Download: https://github.com/be5invis/Iosevka/releases
-Check: https://typeof.net/Iosevka/
-
-## fzf
+## Fzf
 
 fzf (fuzzy finder) useful for searching a list of items (uses grep internally)  
 uses:
@@ -51,7 +49,7 @@ If, the keybinding or fzf failed to work after setting up the configuration try,
 ~/.fzf/install
 ```
 
-## configuration
+## Configuration
 
 Cloning .dotfiles2 to your system
 ```sh
