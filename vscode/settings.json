@@ -4,13 +4,12 @@
   "code-runner.executorMap": {
     "cpp": "run_c $fullFileName"
   },
-  "C_Cpp.autocompleteAddParentheses": true,
   "editor.acceptSuggestionOnEnter": "off",
   "editor.bracketPairColorization.enabled": false,
-  "editor.codeLensFontFamily": "Iosevka Nerd Font",
+  "editor.codeLensFontFamily": "Iosevka Curly",
   "editor.cursorBlinking": "solid",
   "editor.defaultFormatter": "esbenp.prettier-vscode",
-  "editor.fontFamily": "Iosevka Nerd Font",
+  "editor.fontFamily": "Iosevka Curly",
   "editor.fontLigatures": true,
   "editor.fontSize": 14,
   "editor.formatOnSave": true,
@@ -34,7 +33,7 @@
     "editor.defaultFormatter": "svelte.svelte-vscode"
   },
   "errorLens.delay": 0,
-  "errorLens.fontFamily": "Iosevka Nerd Font",
+  "errorLens.fontFamily": "Iosevka Curly",
   "errorLens.fontSize": "14",
   "errorLens.enabledDiagnosticLevels": ["error"],
   "explorer.autoReveal": false,
@@ -57,7 +56,7 @@
   "svelte.enable-ts-plugin": true,
   "terminal.integrated.confirmOnKill": "never",
   "terminal.integrated.cursorBlinking": true,
-  "terminal.integrated.fontFamily": "Iosevka Nerd Font Mono",
+  "terminal.integrated.fontFamily": "Iosevka Term Curly",
   "terminal.integrated.fontSize": 14,
   "terminal.integrated.enableMultiLinePasteWarning": false,
   "terminal.integrated.macOptionIsMeta": true,
@@ -75,7 +74,7 @@
   "vim.incsearch": true,
   "vim.replaceWithRegister": true,
   "vim.useCtrlKeys": true,
-  "vim.useSystemClipboard": false,
+  "vim.useSystemClipboard": true,
   "vim.visualstar": true,
   "vim.normalModeKeyBindings": [
     {
@@ -99,17 +98,12 @@
       "silent": true
     },
     {
-      "before": ["<leader>", "r"],
+      "before": ["<leader>", "x"],
       "commands": ["code-runner.run"],
       "silent": true
     },
     {
-      "before": ["g", "h"],
-      "commands": ["editor.action.showHover"],
-      "silent": true
-    },
-    {
-      "before": ["g", "r"],
+      "before": ["g", "R"],
       "commands": ["editor.action.rename"],
       "silent": true
     },
@@ -122,6 +116,10 @@
       "before": ["<C-p>"],
       "commands": ["editor.action.marker.prevInFiles"],
       "silent": true
+    },
+    {
+      "before": ["Y"],
+      "after": ["y", "$"]
     }
   ],
   "vim.visualModeKeyBindings": [
