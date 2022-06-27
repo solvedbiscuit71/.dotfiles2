@@ -74,8 +74,6 @@
   "vim.incsearch": true,
   "vim.replaceWithRegister": true,
   "vim.useCtrlKeys": true,
-  "vim.useSystemClipboard": true,
-  "vim.visualstar": true,
   "vim.normalModeKeyBindings": [
     {
       "before": ["<C-l>"],
