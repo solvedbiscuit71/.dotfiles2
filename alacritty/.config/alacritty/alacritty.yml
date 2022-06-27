@@ -27,16 +27,16 @@ font:
   builtin_box_drawing: true
 
   normal:
-    family: Iosevka Nerd Font Mono
+    family: Iosevka Term Curly
     style: Regular
   bold:
-    family: Iosevka Nerd Font Mono
+    family: Iosevka Term Curly
     style: Bold
   italic:
-    family: Iosevka Nerd Font Mono
+    family: Iosevka Term Curly
     style: Italic
   bold_italic:
-    family: Iosevka Nerd Font Mono
+    family: Iosevka Term Curly
     style: Bold Italic
 
 draw_bold_text_with_bright_colors: true
