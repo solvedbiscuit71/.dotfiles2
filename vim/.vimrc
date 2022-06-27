@@ -38,6 +38,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'tpope/vim-repeat'
   Plug 'tpope/vim-surround'
   Plug 'vim-scripts/ReplaceWithRegister'
+  Plug 'easymotion/vim-easymotion'
 call plug#end()
 
 " Color theme
