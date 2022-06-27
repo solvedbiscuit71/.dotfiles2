@@ -24,15 +24,12 @@ echo /opt/homebrew/bin/fish | sudo tee -a /etc/shells
 chsh -s /opt/homebrew/bin/fish
 ```
 
-## nerdfont
+## font family
 
-Installing nerdfont (support icons)
-check out: https://www.nerdfonts.com/font-downloads
+Here, we are using **Iosevka Term Curly** which is part of Iosevka Family.  
 
-```sh
-/opt/homebrew/bin/brew tap homebrew/cask-fonts
-/opt/homebrew/bin/brew install --cask font-iosevka-nerd-font
-```
+Download: https://github.com/be5invis/Iosevka/releases
+Check: https://typeof.net/Iosevka/
 
 ## fzf
 
