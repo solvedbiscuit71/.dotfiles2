@@ -8,8 +8,8 @@ window:
     lines: 24
 
   padding:
-    x: 0
-    y: 5
+    x: 4
+    y: 2
 
   title: Alacritty
   opacity: .8
