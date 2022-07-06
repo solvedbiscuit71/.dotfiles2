@@ -4,6 +4,7 @@
   "code-runner.executorMap": {
     "cpp": "run_c $fullFileName"
   },
+  "C_Cpp.autocompleteAddParentheses": true,
   "editor.acceptSuggestionOnEnter": "off",
   "editor.bracketPairColorization.enabled": false,
   "editor.codeLensFontFamily": "Iosevka Curly",
@@ -15,8 +16,12 @@
   "editor.formatOnSave": true,
   "editor.lineNumbers": "relative",
   "editor.minimap.enabled": false,
-  "editor.quickSuggestionsDelay": 0,
-  "editor.scrollBeyondLastLine": false,
+  "editor.quickSuggestionsDelay": 5,
+  "editor.scrollBeyondLastLine": true,
+  "editor.scrollbar.horizontal": "hidden",
+  "editor.scrollbar.vertical": "hidden",
+  "editor.snippetSuggestions": "top",
+  "editor.suggestFontSize": 14,
   "editor.tabSize": 2,
   "emmet.includeLanguages": {
     "svelte": "html"
@@ -32,10 +37,6 @@
   "[svelte]": {
     "editor.defaultFormatter": "svelte.svelte-vscode"
   },
-  "errorLens.delay": 0,
-  "errorLens.fontFamily": "Iosevka Curly",
-  "errorLens.fontSize": "14",
-  "errorLens.enabledDiagnosticLevels": ["error"],
   "explorer.autoReveal": false,
   "explorer.compactFolders": false,
   "explorer.confirmDelete": false,
@@ -48,14 +49,16 @@
     "**/*.out*": true
   },
   "javascript.updateImportsOnFileMove.enabled": "always",
+  "markdown.preview.fontFamily": "Iosevka Aile, sans serif",
   "projectManager.git.baseFolders": ["~/Code", "~/.dotfiles2"],
   "rust-analyzer.checkOnSave.enable": true,
   "rust-analyzer.inlayHints.parameterHints.enable": false,
   "rust-analyzer.inlayHints.closingBraceHints.enable": false,
   "rust-analyzer.inlayHints.chainingHints.enable": false,
+  "screencastMode.fontSize": 40,
+  "screencastMode.verticalOffset": 10,
   "svelte.enable-ts-plugin": true,
   "terminal.integrated.confirmOnKill": "never",
-  "terminal.integrated.cursorBlinking": true,
   "terminal.integrated.fontFamily": "Iosevka Term Curly",
   "terminal.integrated.fontSize": 14,
   "terminal.integrated.enableMultiLinePasteWarning": false,
@@ -106,16 +109,6 @@
       "silent": true
     },
     {
-      "before": ["<C-n>"],
-      "commands": ["editor.action.marker.nextInFiles"],
-      "silent": true
-    },
-    {
-      "before": ["<C-p>"],
-      "commands": ["editor.action.marker.prevInFiles"],
-      "silent": true
-    },
-    {
       "before": ["Y"],
       "after": ["y", "$"]
     }
@@ -133,8 +126,11 @@
   "vim.leader": "<space>",
   "workbench.activityBar.visible": false,
   "workbench.colorTheme": "Aldrico's Gruvbox",
+  "workbench.editor.tabSizing": "shrink",
+  "workbench.fontAliasing": "auto",
   "workbench.iconTheme": "gruvbox-material-icon-theme",
   "workbench.productIconTheme": "material-product-icons",
   "workbench.sideBar.location": "right",
-  "workbench.startupEditor": "none"
+  "workbench.startupEditor": "none",
+  "zenMode.hideLineNumbers": false
 }
