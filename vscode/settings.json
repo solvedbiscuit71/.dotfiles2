@@ -9,16 +9,18 @@
   "editor.bracketPairColorization.enabled": false,
   "editor.codeLensFontFamily": "Iosevka Curly",
   "editor.cursorBlinking": "solid",
+  "editor.cursorSurroundingLines": 10,
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.fontFamily": "Iosevka Curly",
   "editor.fontLigatures": true,
   "editor.fontSize": 14,
   "editor.formatOnSave": true,
   "editor.lineNumbers": "relative",
+  "editor.linkedEditing": true,
   "editor.minimap.enabled": false,
   "editor.quickSuggestionsDelay": 5,
   "editor.scrollBeyondLastLine": true,
-  "editor.scrollbar.horizontal": "hidden",
+  "editor.scrollbar.horizontal": "auto",
   "editor.scrollbar.vertical": "hidden",
   "editor.snippetSuggestions": "top",
   "editor.suggestFontSize": 14,
@@ -48,6 +50,7 @@
     "**/*-lock.*": true,
     "**/*.out*": true
   },
+  "liveServer.settings.donotShowInfoMsg": true,
   "javascript.updateImportsOnFileMove.enabled": "always",
   "markdown.preview.fontFamily": "Iosevka Aile, sans serif",
   "projectManager.git.baseFolders": ["~/Code", "~/.dotfiles2"],
@@ -55,8 +58,6 @@
   "rust-analyzer.inlayHints.parameterHints.enable": false,
   "rust-analyzer.inlayHints.closingBraceHints.enable": false,
   "rust-analyzer.inlayHints.chainingHints.enable": false,
-  "screencastMode.fontSize": 40,
-  "screencastMode.verticalOffset": 10,
   "svelte.enable-ts-plugin": true,
   "terminal.integrated.confirmOnKill": "never",
   "terminal.integrated.fontFamily": "Iosevka Term Curly",
@@ -104,6 +105,16 @@
       "silent": true
     },
     {
+      "before": ["<leader>", "l", "o"],
+      "commands": ["extension.liveServer.goOnline"],
+      "silent": true
+    },
+    {
+      "before": ["<leader>", "l", "c"],
+      "commands": ["extension.liveServer.goOffline"],
+      "silent": true
+    },
+    {
       "before": ["g", "R"],
       "commands": ["editor.action.rename"],
       "silent": true
@@ -111,6 +122,24 @@
     {
       "before": ["Y"],
       "after": ["y", "$"]
+    },
+    {
+      "before": ["H"],
+      "after": ["_"]
+    },
+    {
+      "before": ["L"],
+      "after": ["$"]
+    }
+  ],
+  "vim.operatorPendingModeKeyBindings": [
+    {
+      "before": ["H"],
+      "after": ["_"]
+    },
+    {
+      "before": ["L"],
+      "after": ["$"]
     }
   ],
   "vim.visualModeKeyBindings": [
