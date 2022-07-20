@@ -49,8 +49,13 @@ hi Normal guibg=NONE ctermbg=NONE
 let g:mapleader = ' '
 
 nnoremap Y y$
-vnoremap > >gv
-vnoremap < <gv
+nnoremap H _
+onoremap H _
+nnoremap L $
+onoremap L $
+
+vnoremap <silent> > >gv
+vnoremap <silent> < <gv
 
 nnoremap <silent> cd :lcd %:h<CR>
 nnoremap <silent> <leader>n :Ex<CR>
