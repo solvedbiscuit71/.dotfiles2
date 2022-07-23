@@ -1,6 +1,4 @@
-# lp -> list projects
 function lp
-  # check for `lp .`
   if [ "$argv[1]" = "." ]
     set folder $PWD
   else
