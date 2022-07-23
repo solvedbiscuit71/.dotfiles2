@@ -1,7 +1,7 @@
 #!/opt/homebrew/bin/fish
 
 # removing existing files
-set files "$HOME/.vimrc" "$HOME/.gitconfig"
+set files "$HOME/.vimrc" "$HOME/.gitconfig" "$HOME/.tmux.conf"
 set dirs "$HOME/.config/alacritty/" "$HOME/.config/fish/"
 
 for file in $files
