@@ -2,8 +2,8 @@ syntax on
 set background=dark
 set backspace=indent,eol,start
 set cursorline
-set expandtab
-set hidden
+set noexpandtab
+set nohidden
 set incsearch
 set laststatus=2
 set nocompatible
@@ -12,8 +12,9 @@ set noshowmode
 set noswapfile
 set number relativenumber
 set scrolloff=10
-set shiftwidth=2
-set tabstop=2
+set shiftwidth=4
+set softtabstop=4
+set tabstop=8
 set termguicolors
 set timeoutlen=1000 ttimeoutlen=0
 set wildmenu
@@ -23,10 +24,8 @@ let g:lightline = { 'colorscheme': 'apprentice' }
 " Plugins
 call plug#begin('~/.vim/plugged')
   Plug 'itchyny/lightline.vim'
-  Plug 'bling/vim-bufferline'
 
   Plug 'lifepillar/vim-gruvbox8'
-  Plug 'ryanoasis/vim-devicons'
   Plug 'solvedbiscuit71/vim-autopair'
 
   Plug 'kana/vim-textobj-entire'
@@ -38,7 +37,6 @@ call plug#begin('~/.vim/plugged')
   Plug 'tpope/vim-repeat'
   Plug 'tpope/vim-surround'
   Plug 'vim-scripts/ReplaceWithRegister'
-  Plug 'easymotion/vim-easymotion'
 call plug#end()
 
 " Color theme
@@ -47,20 +45,18 @@ hi Normal guibg=NONE ctermbg=NONE
 
 " Keybindings
 let g:mapleader = ' '
+nnoremap <leader>n <cmd>Ex<CR>
 
 nnoremap Y y$
 nnoremap H _
-onoremap H _
 nnoremap L $
+onoremap H _
 onoremap L $
+vnoremap H _
+vnoremap L $
 
-vnoremap <silent> > >gv
-vnoremap <silent> < <gv
-
-nnoremap <silent> cd :lcd %:h<CR>
-nnoremap <silent> <leader>n :Ex<CR>
-nnoremap <silent> <C-h> :bprevious<CR>
-nnoremap <silent> <C-l> :bnext<CR>
+vnoremap > >gv
+vnoremap < <gv
 
 nnoremap <expr> k (v:count > 5 ? "m'" . v:count : "") . 'k'
 nnoremap <expr> j (v:count > 5 ? "m'" . v:count : "") . 'j'

@@ -16,10 +16,6 @@ for dir in $dirs
 end
 
 for folder in */
-  if [ $folder = "vscode/" ]
-    continue
-  end
-
   echo "stow $folder"
   /opt/homebrew/bin/stow $folder
 end
