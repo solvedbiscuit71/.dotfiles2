@@ -15,3 +15,7 @@ alias gu="git restore"
 
 alias bd="cd ~/.dotfiles2"
 alias bc="cd ~/Code"
+
+# Bun
+set --export BUN_INSTALL "$HOME/.bun"
+set --export PATH $BUN_INSTALL/bin $PATH

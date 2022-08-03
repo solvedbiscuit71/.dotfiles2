@@ -2,5 +2,6 @@
 .DS_Store
 
 # ignore defaults
+fish/.config/fish/completions/bun.fish
 fish/.config/fish/functions/fzf_key_bindings.fish
 fish/.config/fish/fish_variables
