@@ -16,6 +16,10 @@ for dir in $dirs
 end
 
 for folder in */
+  if [ $folder = "git/" ]
+    continue
+  end
+
   echo "stow $folder"
   /opt/homebrew/bin/stow $folder
 end
