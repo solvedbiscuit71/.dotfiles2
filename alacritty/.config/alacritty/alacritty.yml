@@ -8,8 +8,8 @@ env:
 # Window Setting
 window:
   dimensions:
-    columns: 120
-    lines: 32
+    columns: 126
+    lines: 36
 
   padding:
     x: 2
@@ -27,7 +27,7 @@ mouse:
 
 # Fonts Setting
 font:
-  size: 14
+  size: 15
   use_thin_strokes: true
   builtin_box_drawing: true
 

@@ -10,6 +10,7 @@ alias gs="git status"
 alias ga="git add"
 alias gc="git commit"
 alias gl="git log --oneline --graph"
+alias gd="git diff"
 alias gp="git push"
 alias gu="git restore"
 
