@@ -1,6 +1,8 @@
 # Replace your <name> and <email>
 [user]
-  name = Praveen Perumal
-  email = ppraveen98841@gmail.com
+    name = Praveen Perumal
+    email = ppraveen98841@gmail.com
 [core]
-  editor = vim
+    editor = vim
+[init]
+    defaultBranch = main
