@@ -14,8 +14,7 @@ alias gd="git diff"
 alias gp="git push"
 alias gu="git restore"
 
-alias bd="cd ~/.dotfiles2"
-alias bc="cd ~/Code"
+alias config="cd ~/.dotfiles2 && lp ."
 
 # Bun
 set --export BUN_INSTALL "$HOME/.bun"
