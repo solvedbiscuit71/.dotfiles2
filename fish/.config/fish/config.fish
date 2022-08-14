@@ -1,5 +1,5 @@
 # Add to PATH
-set PATH $PATH /opt/homebrew/bin $HOME/.cargo/bin
+set PATH "/opt/homebrew/bin/" "$HOME/.cargo/bin/" $PATH
 
 # Alias
 alias l="exa -al -s=type --no-user"
