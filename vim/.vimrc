@@ -3,7 +3,7 @@ set background=dark
 set backspace=indent,eol,start
 set cursorline
 set noexpandtab
-set nohidden
+set hidden
 set incsearch
 set laststatus=2
 set nocompatible
@@ -24,6 +24,7 @@ let g:lightline = { 'colorscheme': 'apprentice' }
 " Plugins
 call plug#begin('~/.vim/plugged')
   Plug 'itchyny/lightline.vim'
+  Plug 'bling/vim-bufferline'
 
   Plug 'lifepillar/vim-gruvbox8'
   Plug 'solvedbiscuit71/vim-autopair'
@@ -58,5 +59,5 @@ vnoremap L $
 vnoremap > >gv
 vnoremap < <gv
 
-nnoremap <expr> k (v:count > 5 ? "m'" . v:count : "") . 'k'
-nnoremap <expr> j (v:count > 5 ? "m'" . v:count : "") . 'j'
+nnoremap <C-h> <cmd>bprevious<CR>
+nnoremap <C-l> <cmd>bnext<CR>
