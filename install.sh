@@ -1,7 +1,7 @@
 #!/opt/homebrew/bin/fish
 
-set files "$HOME/.vimrc" "$HOME/.gitconfig" "$HOME/.tmux.conf"
-set dirs "$HOME/.config/alacritty/" "$HOME/.config/fish/"
+set files "$HOME/.gitconfig" "$HOME/.tmux.conf"
+set dirs "$HOME/.config/nvim/" "$HOME/.config/alacritty/" "$HOME/.config/fish/"
 
 for file in $files
   if test -e $file

@@ -3,6 +3,6 @@
     name = Praveen Perumal
     email = ppraveen98841@gmail.com
 [core]
-    editor = vim
+    editor = nvim
 [init]
     defaultBranch = main

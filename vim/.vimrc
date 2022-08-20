@@ -48,14 +48,6 @@ hi Normal guibg=NONE ctermbg=NONE
 let g:mapleader = ' '
 nnoremap <leader>n <cmd>Ex<CR>
 
-nnoremap Y y$
-nnoremap H _
-nnoremap L $
-onoremap H _
-onoremap L $
-vnoremap H _
-vnoremap L $
-
 vnoremap > >gv
 vnoremap < <gv
 

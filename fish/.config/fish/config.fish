@@ -14,6 +14,7 @@ alias gd="git diff"
 alias gp="git push"
 alias gu="git restore"
 
+alias vim="nvim"
 alias config="cd ~/.dotfiles2 && lp ."
 
 # Bun
