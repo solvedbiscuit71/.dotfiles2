@@ -17,3 +17,5 @@ set("n", "<leader>g", ":Telescope git_files<CR>", opt)
 -- visual mode
 set("v", ">", ">gv", opt)
 set("v", "<", "<gv", opt)
+
+set("v", "<C-y>", "\"*y", opt)

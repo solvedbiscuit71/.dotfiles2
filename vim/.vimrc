@@ -48,8 +48,12 @@ hi Normal guibg=NONE ctermbg=NONE
 let g:mapleader = ' '
 nnoremap <leader>n <cmd>Ex<CR>
 
+nnoremap <C-h> <cmd>bprevious<CR>
+nnoremap <C-l> <cmd>bnext<CR>
+nnoremap <leader>d <cmd>bd<CR>
+
 vnoremap > >gv
 vnoremap < <gv
 
-nnoremap <C-h> <cmd>bprevious<CR>
-nnoremap <C-l> <cmd>bnext<CR>
+nnoremap Y y$
+vnoremap <C-y> "*y
