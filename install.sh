@@ -1,6 +1,6 @@
 #!/usr/bin/env fish
 
-set files "$HOME/.gitconfig" "$HOME/.tmux.conf"
+set files "$HOME/.vimrc" "$HOME/.tmux.conf"
 set dirs "$HOME/.config/nvim/" "$HOME/.config/alacritty/" "$HOME/.config/fish/"
 
 for file in $files

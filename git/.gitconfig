@@ -1,4 +1,4 @@
-# Replace your <name> and <email>
+# .gitconfig is not stowed or destowed automatically
 [user]
     name = Praveen Perumal
     email = ppraveen98841@gmail.com
