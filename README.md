@@ -1,74 +1,104 @@
-# Prerequisite
 
-For MacOs (only)
+__THIS CONFIGURATION IS CREATED AND TESTED ONLY FOR MACOS AND LINUX__
+
+# prerequisites
+
+For macos, we need to install xcode for certain developer tools.
 ```sh
 xcode-select --install
 ```
 
-HomeBrew (Package Manager)
+we need a package manager, install homebrew (macos and linux)
 ```sh
-/bin/zsh -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
 
-# Installation
+## terminal
 
-Installing fish.sh (shell) and alacritty (terimal emulator)
+in this .dotfiles we use `fish.sh` as default shell
 ```sh
-/opt/homebrew/bin/brew install fish
-/opt/homebrew/bin/brew install --cask alacritty
+brew install fish
 ```
 
-Setting default to fish.sh
+if above doesn't work, we need to add brew into the path.
+
+now, we will install `alacritty` terminal emulator
 ```sh
-echo /opt/homebrew/bin/fish | sudo tee -a /etc/shells
-chsh -s /opt/homebrew/bin/fish
+brew install --cask alacritty
 ```
 
-Installing font family,  
+we also need `stow` for dotfiles management
+```sh
+brew install stow
+```
 
-(Iosevka Term Curly) which is a part of (Iosevka Curly) is being used for alacritty.  
-Download: https://typeof.net/Iosevka/
+## font
 
-## Fzf
+here, we use `iosevka-term-curly-slab` as our default font-family for alacritty
+```sh
+brew tap homebrew/cask-fonts
+brew install --cask font-iosevka-term-curly-slab
+```
 
-fzf (fuzzy finder) useful for searching a list of items (uses grep internally)  
-uses:
-* `C-t` finding files
-* `C-r` finding recent commands
-* `lp` list projects using fzf
+## fuzzy finder (optional)
 
-install by,
+fzf is a useful command line utility for searching through a list of items
+
+use cases:
+- `C-t` : searching files in cwd
+- `C-r` : searching recent commands
+- `lp` : it is internally used by `lp` script
+
 ```sh
 git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 ~/.fzf/install
 ```
 
-NOTE:  
-If, the keybinding or fzf failed to work after setting up the configuration try,
+## vim and neovim (optional)
+
+by default, macos and linux comes pre-installed with `vim` but, you can install both
+via homebrew
 ```sh
-~/.fzf/install
+brew install vim neovim
 ```
 
-## Configuration
+both vim and neovim using `vim-plug` and `packer.nvim` as its package manager
+```sh
+curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+```
 
-Cloning .dotfiles2 to your system
+```sh
+git clone --depth 1 https://github.com/wbthomason/packer.nvim \
+    ~/.local/share/nvim/site/pack/packer/start/packer.nvim
+```
+
+# installation
+
+## set fish as your default shell
+
+```sh
+echo /opt/homebrew/bin/fish | sudo tee -a /etc/shells
+chsh -s /opt/homebrew/bin/fish
+```
+
+and restart your computer for changes to take place
+
+## clone and install .dotfiles2
+
+clone this repository into to system (recommended location: `~/.dotfiles2`)
 ```sh
 git clone https://github.com/solvedbiscuit71/.dotfiles2.git ~/.dotfiles2
 ```
 
-and, run
+before running the `install.sh` script we need to add `stow` to the path!
 ```sh
-~/.dotfiles2/install.sh
+fish_add_path /opt/homebrew/bin/
 ```
 
-or
-```sh
-~/.dotfiles2/remove.sh
-```
-
-NOTE:  
-if you encounter access denied when running `~/.dotfiles/<name>.sh`
+then, run the install script
 ```sh
 cd ~/.dotfiles2
 chmod 744 install.sh remove.sh
+fish install.sh
 ```
