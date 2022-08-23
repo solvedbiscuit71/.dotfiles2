@@ -23,21 +23,16 @@ let g:lightline = { 'colorscheme': 'apprentice' }
 
 " Plugins
 call plug#begin('~/.vim/plugged')
+  Plug 'lifepillar/vim-gruvbox8'
+
   Plug 'itchyny/lightline.vim'
   Plug 'bling/vim-bufferline'
 
-  Plug 'lifepillar/vim-gruvbox8'
   Plug 'solvedbiscuit71/vim-autopair'
-
-  Plug 'kana/vim-textobj-entire'
-  Plug 'kana/vim-textobj-indent'
-  Plug 'kana/vim-textobj-line'
-  Plug 'kana/vim-textobj-user'
 
   Plug 'tpope/vim-commentary'
   Plug 'tpope/vim-repeat'
   Plug 'tpope/vim-surround'
-  Plug 'vim-scripts/ReplaceWithRegister'
 call plug#end()
 
 " Color theme
