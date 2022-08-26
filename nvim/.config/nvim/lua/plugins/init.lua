@@ -6,17 +6,10 @@ return require('packer').startup(function(use)
     use { 'ellisonleao/gruvbox.nvim' }
 
     -- Statusline
-    use {
-        'nvim-lualine/lualine.nvim',
-        requires = { 'kyazdani42/nvim-web-devicons', opt = true }
-    }
+    use { 'nvim-lualine/lualine.nvim' }
 
     -- Bufferline
-    use {
-        'akinsho/bufferline.nvim', 
-        tag = "v2.*", 
-        requires = 'kyazdani42/nvim-web-devicons'
-    }
+    use { 'akinsho/bufferline.nvim', tag = "v2.*" }
 
     -- Autopairs
     use { 'windwp/nvim-autopairs' }

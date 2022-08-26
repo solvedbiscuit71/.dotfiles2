@@ -1,10 +1,12 @@
+local actions = require('telescope.actions')
+
 require('telescope').setup {
-    pickers = {
-        find_files = {
-            disable_devicons = true
-        },
-        git_files = {
-            disable_devicons = true
+    defaults = {
+        disable_devicons = true,
+        mappings = {
+          i = {
+              ["<esc>"] = actions.close
+          }
         }
     }
 }
