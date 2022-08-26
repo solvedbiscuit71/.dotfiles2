@@ -5,5 +5,6 @@ for folder in */
     continue
   end
 
+  echo "destow $folder"
   stow -D $folder
 end
