@@ -9,15 +9,6 @@ alias vim="nvim"
 # Alias to builtin command
 alias q="exit 0"
 
-# Alias to git command
-alias gs="git status"
-alias ga="git add"
-alias gc="git commit"
-alias gl="git log --oneline --graph"
-alias gd="git diff"
-alias gp="git push"
-alias gu="git restore"
-
 # Bookmark alias
 alias bd="cd ~/.dotfiles2"
 alias bc="cd ~/code"

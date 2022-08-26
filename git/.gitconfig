@@ -6,3 +6,6 @@
     editor = nvim
 [init]
     defaultBranch = main
+[alias]
+    g = grep --break --heading --line-number
+    l = log --graph
