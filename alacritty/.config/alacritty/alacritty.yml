@@ -15,10 +15,6 @@ window:
     x: 2
     y: 2
 
-  position:
-    x: 720
-    y: 180
-
   title: Alacritty
   dynamic_title: false
   opacity: .8
