@@ -13,16 +13,25 @@ we need a package manager, install homebrew (macos and linux)
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
 
-## terminal
+## shell
 
 in this .dotfiles we use `fish.sh` as default shell
 ```sh
 brew install fish
 ```
 
-if above doesn't work, we need to add brew into the path.
+### set fish as your default shell
 
-now, we will install `alacritty` terminal emulator
+```sh
+echo /opt/homebrew/bin/fish | sudo tee -a /etc/shells
+chsh -s /opt/homebrew/bin/fish
+```
+
+and restart your computer for changes to take place
+
+## terminal
+
+we will install `alacritty` terminal emulator
 ```sh
 brew install --cask alacritty
 ```
@@ -73,18 +82,7 @@ git clone --depth 1 https://github.com/wbthomason/packer.nvim \
     ~/.local/share/nvim/site/pack/packer/start/packer.nvim
 ```
 
-# installation
-
-## set fish as your default shell
-
-```sh
-echo /opt/homebrew/bin/fish | sudo tee -a /etc/shells
-chsh -s /opt/homebrew/bin/fish
-```
-
-and restart your computer for changes to take place
-
-## clone and install .dotfiles2
+# clone and setup dotfiles
 
 clone this repository into to system (recommended location: `~/.dotfiles2`)
 ```sh
