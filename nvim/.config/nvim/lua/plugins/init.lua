@@ -3,25 +3,33 @@ return require('packer').startup(function(use)
     use 'wbthomason/packer.nvim'
 
     -- ColorScheme
-    use { 'ellisonleao/gruvbox.nvim' }
+    use 'ellisonleao/gruvbox.nvim'
 
     -- Statusline
-    use { 'nvim-lualine/lualine.nvim' }
+    use 'nvim-lualine/lualine.nvim'
 
     -- Bufferline
     use { 'akinsho/bufferline.nvim', tag = "v2.*" }
 
     -- Autopairs
-    use { 'windwp/nvim-autopairs' }
+    use 'windwp/nvim-autopairs'
 
     -- Comments
-    use { 'numToStr/Comment.nvim' }
+    use 'numToStr/Comment.nvim'
 
     -- Surrounds
     use { 'kylechui/nvim-surround', tag = '*' }
 
     -- Plenary (UI component provider)
-    use { 'nvim-lua/plenary.nvim' }
+    use 'nvim-lua/plenary.nvim'
+
+    -- Treesitter (Syntax Highlight)
+    use {
+        'nvim-treesitter/nvim-treesitter',
+        run = function()
+            require('nvim-treesitter.install').update({ with_sync = true })
+        end,
+    }
 
     -- Telescope
     use {
@@ -31,5 +39,5 @@ return require('packer').startup(function(use)
     }
 
     -- Markdown
-    use { 'ixru/nvim-markdown' }
+    use 'ixru/nvim-markdown'
 end)
