@@ -33,13 +33,13 @@ font:
 
   normal:
     family: Iosevka Term Curly Slab
-    style: Regular
+    style: Light
   bold:
     family: Iosevka Term Curly Slab
     style: Bold
   italic:
     family: Iosevka Term Curly Slab
-    style: Regualar
+    style: Light
   bold_italic:
     family: Iosevka Term Curly Slab
     style: Bold
