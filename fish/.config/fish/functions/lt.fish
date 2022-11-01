@@ -1,8 +1,8 @@
-function lp
+function lt
   if [ "$argv[1]" = "." ]
     set folder $PWD
   else
-    set folder (find ~/Code ~/.dotfiles2 -maxdepth 2 -type d -not -path "*/.git/*" | fzf)
+    set folder (find ~/Code ~/.dotfiles2 ~/.wiki -maxdepth 2 -type d -not -path "*/.git/*" | fzf)
   end
 
   if [ "$folder" ]
