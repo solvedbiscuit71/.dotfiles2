@@ -32,16 +32,16 @@ font:
   builtin_box_drawing: true
 
   normal:
-    family: Iosevka Term Curly Slab
+    family: Iosevka Term
     style: Light
   bold:
-    family: Iosevka Term Curly Slab
+    family: Iosevka Term
     style: Medium
   italic:
-    family: Iosevka Term Curly Slab
-    style: Italic
+    family: Iosevka Term
+    style: Light
   bold_italic:
-    family: Iosevka Term Curly Slab
-    style: Medium Italic
+    family: Iosevka Term
+    style: Medium
 
 draw_bold_text_with_bright_colors: true
