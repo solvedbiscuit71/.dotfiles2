@@ -1,7 +1,4 @@
-
-__THIS CONFIGURATION IS CREATED AND TESTED ONLY FOR MACOS AND LINUX__
-
-# prerequisites
+# Prerequisites
 
 For macos, we need to install xcode for certain developer tools.
 ```sh
@@ -13,25 +10,27 @@ we need a package manager, install homebrew (macos and linux)
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
 
-## shell
+# Shell
 
-in this .dotfiles we use `fish.sh` as default shell
+in this .dotfiles we use `bash` as default shell
 ```sh
-brew install fish
+/opt/homebrew/bin/brew install bash
 ```
 
-### set fish as your default shell
-
+by default, macos uses `zsh` as its default shell to change it bash,
 ```sh
-echo /opt/homebrew/bin/fish | sudo tee -a /etc/shells
-chsh -s /opt/homebrew/bin/fish
+echo '/opt/homebrew/bin/bash' | sudo tee -a /etc/shells
+chsh -s /opt/homebrew/bin/bash
 ```
 
-and restart your computer for changes to take place
+after restarting the computer, open the terminal and run the following command
+```sh
+export PATH='/opt/homebrew/bin':$PATH
+```
 
-## terminal
+# Terminal Emulator
 
-we will install `alacritty` terminal emulator
+we will install the `alacritty` emulator (only for macos)
 ```sh
 brew install --cask alacritty
 ```
@@ -41,32 +40,17 @@ we also need `stow` for dotfiles management
 brew install stow
 ```
 
-## font
+# Font
 
-here, we use `iosevka-term-curly-slab` as our default font-family for alacritty
+here, we use `iosevka-term` as our default font-family for alacritty
 ```sh
 brew tap homebrew/cask-fonts
-brew install --cask font-iosevka-term-curly-slab
+brew install --cask font-iosevka
 ```
 
-## fuzzy finder (optional)
+# Vim and Neovim
 
-fzf is a useful command line utility for searching through a list of items
-
-use cases:
-- `C-t` : searching files in cwd
-- `C-r` : searching recent commands
-- `lp` : it is internally used by `lp` script
-
-```sh
-git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
-~/.fzf/install
-```
-
-## vim and neovim (optional)
-
-by default, macos and linux comes pre-installed with `vim` but, you can install both
-via homebrew
+To install vim and neovim run the following command,
 ```sh
 brew install vim neovim
 ```
@@ -82,21 +66,11 @@ git clone --depth 1 https://github.com/wbthomason/packer.nvim \
     ~/.local/share/nvim/site/pack/packer/start/packer.nvim
 ```
 
-# clone and setup dotfiles
+# Install
 
-clone this repository into to system (recommended location: `~/.dotfiles2`)
+clone this repository
 ```sh
 git clone https://github.com/solvedbiscuit71/.dotfiles2.git ~/.dotfiles2
 ```
 
-before running the `install.sh` script we need to add `stow` to the path!
-```sh
-fish_add_path /opt/homebrew/bin/
-```
-
-then, run the install script
-```sh
-cd ~/.dotfiles2
-chmod 744 install.sh remove.sh
-fish install.sh
-```
+and run the `install.sh`

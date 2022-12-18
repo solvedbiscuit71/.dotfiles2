@@ -1,10 +1,7 @@
-#!/usr/bin/env fish
+#!/opt/homebrew/bin/bash
 
-for folder in */
-  if [ $folder = "git/" ]
-    continue
-  end
-
-  echo "destow $folder"
-  stow -D $folder
-end
+stow_folders=($(ls -l | grep '^d' | grep -v 'git' | awk '{ print $9 }'))
+for folder in ${stow_folders[@]}
+do
+    stow -D $folder
+done

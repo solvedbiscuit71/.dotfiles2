@@ -1,29 +1,26 @@
-#!/usr/bin/env fish
+#!/opt/homebrew/bin/bash
 
-set files "$HOME/.vimrc" "$HOME/.tmux.conf"
-set dirs "$HOME/.config/nvim/" "$HOME/.config/alacritty/" "$HOME/.config/fish/"
+config_files=("$HOME/.vimrc" "$HOME/.tmux.conf")
+config_folders=("$HOME/.config/nvim/" "$HOME/.config/alacritty/")
 
-for file in $files
-  if test -e $file
-    rm $file
-  end
-end
+for file in ${config_files[@]}
+do
+    echo $file
+    if [[ -f $file ]]; then
+	rm $file
+    fi
+done
 
-for dir in $dirs
-  if test -d $dir
-    rm -r $dir
-  end
-end
+for folder in ${config_folders[@]}
+do
+    echo $folder
+    if [[ -d $folder ]]; then
+	rm -r $folder
+    fi
+done
 
-for folder in */
-  if [ $folder = "git/" ]
-    continue
-  end
-
-  echo "stow $folder"
-  stow $folder
-end
-
-ln -s ~/.fzf/shell/key-bindings.fish ~/.dotfiles2/fish/.config/fish/functions/fzf_key_bindings.fish 2> /dev/null
-
-exit 0
+stow_folders=($(ls -l | grep '^d' | grep -v 'git' | awk '{ print $9 }'))
+for folder in ${stow_folders[@]}
+do
+    stow $folder
+done
