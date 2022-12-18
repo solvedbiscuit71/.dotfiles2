@@ -1,6 +1,6 @@
 #!/opt/homebrew/bin/bash
 
-config_files=("$HOME/.vimrc" "$HOME/.tmux.conf" "$HOME/.bashrc")
+config_files=("$HOME/.tmux.conf" "$HOME/.bashrc")
 config_folders=("$HOME/.config/nvim/" "$HOME/.config/alacritty/")
 
 for file in ${config_files[@]}
