@@ -1,4 +1,4 @@
-#!/opt/homebrew/bin/bash
+#!/bin/bash
 
 config_files=("$HOME/.tmux.conf" "$HOME/.bashrc")
 config_folders=("$HOME/.config/nvim/" "$HOME/.config/alacritty/")
