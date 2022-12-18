@@ -28,7 +28,6 @@ mouse:
 # Fonts Setting
 font:
   size: 15
-  use_thin_strokes: true
   builtin_box_drawing: true
 
   normal:
