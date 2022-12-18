@@ -1,6 +1,6 @@
 #!/opt/homebrew/bin/bash
 
-config_files=("$HOME/.vimrc" "$HOME/.tmux.conf")
+config_files=("$HOME/.vimrc" "$HOME/.tmux.conf" "$HOME/.bashrc")
 config_folders=("$HOME/.config/nvim/" "$HOME/.config/alacritty/")
 
 for file in ${config_files[@]}
@@ -24,3 +24,5 @@ for folder in ${stow_folders[@]}
 do
     stow $folder
 done
+
+ln -s ~/.bashrc ~/.bash_profile

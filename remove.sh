@@ -5,3 +5,5 @@ for folder in ${stow_folders[@]}
 do
     stow -D $folder
 done
+
+unlink ~/.bash_profile
