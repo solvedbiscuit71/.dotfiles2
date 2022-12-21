@@ -1,48 +1,48 @@
 # Prerequisites
 
-For macos, we need to install xcode for certain developer tools.
+Install xcode for developer relation packages (clang, git,.. )
 ```bash
 xcode-select --install
 ```
 
-we need a package manager, install homebrew (macos and linux)
+Install `homebrew` for package managing,
 ```bash
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-```
-
-# Shell
-
-in this .dotfiles we use `bash` as default shell
-```bash
-/opt/homebrew/bin/brew install bash
-```
-
-by default, macos uses `zsh` as its default shell to change it bash,
-```bash
-echo '/opt/homebrew/bin/bash' | sudo tee -a /etc/shells
-chsh -s /opt/homebrew/bin/bash
-```
-
-after restarting the computer, open the terminal and run the following command
-```bash
-export PATH='/opt/homebrew/bin':$PATH
 ```
 
 # Terminal Emulator
 
 we will install the `alacritty` emulator (only for macos)
 ```bash
-brew install --cask alacritty
+/opt/homebrew/bin/brew install --cask alacritty
 ```
 
 we also need `stow` for dotfiles management
 ```bash
-brew install stow
+/opt/homebrew/bin/brew install stow
+```
+
+# Shell
+
+In this .dotfiles we use `bash` as default shell
+```bash
+/opt/homebrew/bin/brew install bash
+```
+
+by default, macos uses `zsh` to change it to `bash` run the command,
+```bash
+echo '/opt/homebrew/bin/bash' | sudo tee -a /etc/shells
+chsh -s /opt/homebrew/bin/bash
+```
+
+Restarting the computer makes the changes to take effort, then run the command
+```bash
+export PATH='/opt/homebrew/bin':$PATH
 ```
 
 # Font
 
-here, we use `iosevka-term` as our default font-family for alacritty
+The dotfiles uses `iosevka-term` as the default font-family for alacritty, to install
 ```bash
 brew tap homebrew/cask-fonts
 brew install --cask font-iosevka
@@ -55,7 +55,7 @@ To install neovim,
 brew install neovim
 ```
 
-and we also need to install the package manager for neovim
+and to install the package manager run the command,
 ```bash
 git clone --depth 1 https://github.com/wbthomason/packer.nvim \
     ~/.local/share/nvim/site/pack/packer/start/packer.nvim
@@ -63,9 +63,16 @@ git clone --depth 1 https://github.com/wbthomason/packer.nvim \
 
 # Install
 
-clone this repository
+Clone this repository
 ```bash
 git clone https://github.com/solvedbiscuit71/.dotfiles2.git ~/.dotfiles2
 ```
 
 and run the `install.sh`
+
+## Extras
+
+To make bash autocompletion case-insensitive run the command,
+```bash
+echo set completion-ignore-case on | sudo tee -a /etc/inputrc
+```
