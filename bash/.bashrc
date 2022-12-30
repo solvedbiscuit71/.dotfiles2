@@ -11,5 +11,3 @@ bind 'TAB:menu-complete'
 # prompt
 export PS1='\e[1;32m\u\e[m@\e[1;32m\h\e[m: \e[1;34m\W\e[m $ '
 
-# print system info
-neofetch
