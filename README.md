@@ -76,3 +76,12 @@ To make bash autocompletion case-insensitive run the command,
 ```bash
 echo set completion-ignore-case on | sudo tee -a /etc/inputrc
 ```
+
+To make `ls` command look better we use `exa` command and have aliased it to `ls`
+```bash
+brew install exa
+
+# ls='exa -l -s type --no-user --git'
+# to use normal ls command type,
+# \ls
+```
