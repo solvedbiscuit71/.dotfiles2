@@ -1,6 +1,8 @@
 # alias
 alias vim='nvim'
-alias wiki='cd ~/.wiki; nvim ~/.wiki'
+alias wiki='cd ~/.wiki && vim'
+
+alias ls='exa -l -s type --no-user --git'
 
 # bind
 bind 'TAB:menu-complete'
