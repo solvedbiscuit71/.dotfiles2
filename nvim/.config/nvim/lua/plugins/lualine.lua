@@ -4,6 +4,7 @@ require('lualine').setup {
         theme = 'gruvbox_dark',
         component_separators = '',
         section_separators = '',
+        theme = 'nord'
     },
     sections = {
         lualine_a = {'mode'},

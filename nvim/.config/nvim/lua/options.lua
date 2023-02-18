@@ -18,16 +18,19 @@ vim.opt.relativenumber = true
 vim.opt.scrolloff = 10
 vim.opt.shell = "/opt/homebrew/bin/bash"
 vim.opt.shiftwidth = 4
-vim.opt.smartcase = true
 vim.opt.showmode = false
+vim.opt.signcolumn = "yes"
+vim.opt.smartcase = true
 vim.opt.smartindent = true
 vim.opt.swapfile = false
 vim.opt.tabstop = 4
 vim.opt.termguicolors = true
 vim.opt.timeoutlen = 1000
 vim.opt.undofile = true
+vim.opt.updatetime = 300
 vim.opt.wrap = false
+vim.opt.writebackup = false
 
 -- colorscheme
-vim.cmd([[colorscheme gruvbox]])
+vim.cmd([[colorscheme nord]])
 vim.cmd([[hi Normal guibg=NONE ctermbg=NONE]])

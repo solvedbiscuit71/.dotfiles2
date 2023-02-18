@@ -8,6 +8,7 @@ require "keybinds"
 -- loading plugins configuration
 require "plugins.autopairs"
 require "plugins.bufferline"
+require "plugins.coc"
 require "plugins.comment"
 require "plugins.lualine"
 require "plugins.surround"

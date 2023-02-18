@@ -3,7 +3,7 @@ return require('packer').startup(function(use)
     use 'wbthomason/packer.nvim'
 
     -- ColorScheme
-    use 'ellisonleao/gruvbox.nvim'
+    use 'shaunsingh/nord.nvim'
 
     -- Statusline
     use 'nvim-lualine/lualine.nvim'
@@ -33,11 +33,11 @@ return require('packer').startup(function(use)
 
     -- Telescope
     use {
-        'nvim-telescope/telescope.nvim', 
+        'nvim-telescope/telescope.nvim',
         tag = '0.1.0',
         requires = 'nvim-lua/plenary.nvim'
     }
 
-    -- Markdown
-    use 'ixru/nvim-markdown'
+    -- LSP
+    use {'neoclide/coc.nvim', branch = 'release'}
 end)
