@@ -8,8 +8,12 @@ env:
 # Window Setting
 window:
   dimensions:
-    columns: 126
-    lines: 36
+    columns: 190
+    lines: 42
+
+  position:
+    x: 10
+    y: 60
 
   padding:
     x: 2
@@ -19,7 +23,7 @@ window:
   dynamic_title: false
   opacity: .6
   decorations: none
-  startup_mode: Maximized
+  startup_mode: Windowed
 
 # Mouse Setting
 mouse:
