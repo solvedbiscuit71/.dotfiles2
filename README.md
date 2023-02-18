@@ -72,6 +72,11 @@ and run the `install.sh`
 
 ## Extras
 
+To add bash completion for command,
+```bash
+brew install bash-completion
+```
+
 To make bash autocompletion case-insensitive run the command,
 ```bash
 echo set completion-ignore-case on | sudo tee -a /etc/inputrc
