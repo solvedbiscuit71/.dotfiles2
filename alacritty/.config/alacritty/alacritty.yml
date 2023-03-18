@@ -7,14 +7,6 @@ env:
 
 # Window Setting
 window:
-  dimensions:
-    columns: 190
-    lines: 42
-
-  position:
-    x: 10
-    y: 60
-
   padding:
     x: 2
     y: 2
@@ -31,21 +23,21 @@ mouse:
 
 # Fonts Setting
 font:
-  size: 15 
+  size: 15
   builtin_box_drawing: true
 
   normal:
     family: Iosevka Term
-    style: Light
+    style: Regular
   bold:
     family: Iosevka Term
-    style: Medium
+    style: Bold
   italic:
     family: Iosevka Term
-    style: Light
+    style: Regular
   bold_italic:
     family: Iosevka Term
-    style: Medium
+    style: Bold
 
 draw_bold_text_with_bright_colors: true
 
@@ -55,15 +47,19 @@ colors:
     background: '#2e3440'
     foreground: '#d8dee9'
     dim_foreground: '#a5abb6'
+
   cursor:
     text: '#2e3440'
     cursor: '#d8dee9'
+
   vi_mode_cursor:
     text: '#2e3440'
     cursor: '#d8dee9'
+
   selection:
     text: CellForeground
     background: '#4c566a'
+
   search:
     matches:
       foreground: CellBackground
@@ -71,6 +67,7 @@ colors:
     footer_bar:
       background: '#434c5e'
       foreground: '#d8dee9'
+
   normal:
     black: '#3b4252'
     red: '#bf616a'
@@ -80,6 +77,7 @@ colors:
     magenta: '#b48ead'
     cyan: '#88c0d0'
     white: '#e5e9f0'
+
   bright:
     black: '#4c566a'
     red: '#bf616a'
@@ -89,6 +87,7 @@ colors:
     magenta: '#b48ead'
     cyan: '#8fbcbb'
     white: '#eceff4'
+
   dim:
     black: '#373e4d'
     red: '#94545d'
