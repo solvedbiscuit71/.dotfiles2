@@ -37,7 +37,4 @@ return require('packer').startup(function(use)
         tag = '0.1.0',
         requires = 'nvim-lua/plenary.nvim'
     }
-
-    -- LSP
-    use {'neoclide/coc.nvim', branch = 'release'}
 end)
