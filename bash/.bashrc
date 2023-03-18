@@ -1,8 +1,7 @@
 # alias
 alias vim='nvim'
-alias wiki='cd ~/.wiki && vim'
-
 alias ls='exa -l -s type --no-user --git'
+alias lg='lazygit'
 
 # bind
 bind 'TAB:menu-complete'
@@ -18,4 +17,3 @@ export PS1='\e[1;32m\u\e[m@\e[1;32m\h\e[m: \e[1;34m\W\e[m $ '
 
 # bash_completion
 [[ -r "/opt/homebrew/etc/profile.d/bash_completion.sh" ]] && . "/opt/homebrew/etc/profile.d/bash_completion.sh"
-
