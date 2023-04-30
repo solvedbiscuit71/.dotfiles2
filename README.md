@@ -24,35 +24,25 @@ we also need `stow` for dotfiles management
 
 # Shell
 
-In this .dotfiles we use `bash` as default shell
+In this .dotfiles we support both `bash` and `fish`
 ```bash
 /opt/homebrew/bin/brew install bash
+/opt/homebrew/bin/brew install fish
 ```
 
-by default, macos uses `zsh` to change it to `bash` run the command,
+by default, macos uses `zsh` but, we can change the login shell
 ```bash
-echo '/opt/homebrew/bin/bash' | sudo tee -a /etc/shells
-chsh -s /opt/homebrew/bin/bash
+echo '/opt/homebrew/bin/<shell>' | sudo tee -a /etc/shells
+chsh -s /opt/homebrew/bin/<shell>
 ```
 
-Restarting the computer makes the changes to take effort, then run the command
-```bash
-export PATH='/opt/homebrew/bin':$PATH
-```
-
-# Font
-
-The dotfiles uses `iosevka-term` as the default font-family for alacritty, to install
-```bash
-brew tap homebrew/cask-fonts
-brew install --cask font-iosevka
-```
+__NOTE__: font-family used for alacritty is _Victor Mono_ and free to download [here](https://rubjo.github.io/victor-mono/)
 
 # Neovim
 
 To install neovim,
 ```bash
-brew install neovim
+/opt/homebrew/bin/brew install neovim
 ```
 
 and to install the package manager run the command,
@@ -70,9 +60,16 @@ git clone https://github.com/solvedbiscuit71/.dotfiles2.git ~/.dotfiles2
 
 and run the `install.sh`
 
-## Extras
+# Extras
 
-To add bash completion for command,
+To make `ls` command look better we use `exa` command and have aliased it to `ls`
+```bash
+/opt/homebrew/bin/brew install exa
+```
+
+## bash
+
+To add bash completion install,
 ```bash
 brew install bash-completion
 ```
@@ -82,11 +79,10 @@ To make bash autocompletion case-insensitive run the command,
 echo set completion-ignore-case on | sudo tee -a /etc/inputrc
 ```
 
-To make `ls` command look better we use `exa` command and have aliased it to `ls`
-```bash
-brew install exa
+## fish.sh
 
-# ls='exa -l -s type --no-user --git'
-# to use normal ls command type,
-# \ls
+To install `z` command for fish shell
+```bash
+/opt/homebrew/bin/brew install fisher
+/opt/homebrew/bin/fisher install jethrokuan/z
 ```
