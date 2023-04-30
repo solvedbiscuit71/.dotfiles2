@@ -1,7 +1,7 @@
 #!/bin/bash
 
 config_files=("$HOME/.tmux.conf" "$HOME/.bashrc")
-config_folders=("$HOME/.config/nvim/" "$HOME/.config/alacritty/")
+config_folders=("$HOME/.config/nvim/" "$HOME/.config/alacritty/" "$HOME/.config/skhd" "$HOME/.config/yabai")
 
 for file in ${config_files[@]}
 do
