@@ -20,7 +20,8 @@ shift + alt - 4 : yabai -m window --space 4; yabai -m space --focus 4
 alt - r : yabai -m space --rotate 90
 
 # toggle float
-alt - t : yabai -m window --toggle float;
+alt - t : yabai -m window --toggle float;\
+          yabai -m window --grid 6:6:1:1:4:4
 
 # toggle window split type
 alt - e : yabai -m window --toggle split
