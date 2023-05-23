@@ -10,7 +10,7 @@ Install `homebrew` for package managing,
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
 
-# Terminal Emulator
+## Terminal Emulator
 
 we will install the `alacritty` emulator (only for macos)
 ```bash
@@ -22,7 +22,7 @@ we also need `stow` for dotfiles management
 /opt/homebrew/bin/brew install stow
 ```
 
-# Shell
+## Shell
 
 In this .dotfiles we support both `bash` and `fish`
 ```bash
@@ -38,7 +38,7 @@ chsh -s /opt/homebrew/bin/<shell>
 
 __NOTE__: font-family used for alacritty is _Victor Mono_ and free to download [here](https://rubjo.github.io/victor-mono/)
 
-# Neovim
+## Neovim
 
 To install neovim,
 ```bash
@@ -51,7 +51,7 @@ git clone --depth 1 https://github.com/wbthomason/packer.nvim \
     ~/.local/share/nvim/site/pack/packer/start/packer.nvim
 ```
 
-# Install
+# Installation
 
 Clone this repository
 ```bash
@@ -86,3 +86,27 @@ To install `z` command for fish shell
 /opt/homebrew/bin/brew install fisher
 /opt/homebrew/bin/fisher install jethrokuan/z
 ```
+
+## yabai and skhd
+
+install yabai and skhd using homebrew
+```bash
+brew install yabai skhd
+```
+
+Since, we are using scripting-addition we need to update the sudoers file
+```bash
+sudo visudo -f /private/etc/sudoers.d/yabai
+```
+
+and enter the output of the following command,
+```bash
+echo "$(whoami) ALL=(root) NOPASSWD: sha256:$(shasum -a 256 $(which yabai) | cut -d " " -f 1) $(which yabai) --load-sa"
+```
+
+To manage yabai and skhd by launchd (start automatically upon login) use
+```bash
+yabai --start-service
+skhd --start-service
+```
+
