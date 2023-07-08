@@ -13,7 +13,7 @@ window:
 
   title: Alacritty
   dynamic_title: false
-  opacity: .8
+  opacity: 0.8
   decorations: buttonless
   startup_mode: Windowed
 
@@ -23,7 +23,7 @@ mouse:
 
 # Fonts Setting
 font:
-  size: 15
+  size: 16
   builtin_box_drawing: true
 
   normal:
@@ -34,10 +34,10 @@ font:
     style: Bold
   italic:
     family: Victor Mono
-    style: Regular
+    style: Italic
   bold_italic:
     family: Victor Mono
-    style: Bold
+    style: Bold Italic
 
 draw_bold_text_with_bright_colors: true
 
