@@ -4,9 +4,10 @@ config_files=("$HOME/.tmux.conf" "$HOME/.bashrc")
 config_folders=(
     "$HOME/.config/alacritty/"
     "$HOME/.config/fish/"
+    "$HOME/.config/nvim/"
+    "$HOME/.config/ranger/"
     "$HOME/.config/skhd/"
     "$HOME/.config/yabai/"
-    "$HOME/.config/nvim/"
 )
 
 for file in ${config_files[@]}
