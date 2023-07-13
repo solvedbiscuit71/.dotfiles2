@@ -2,14 +2,11 @@ return require('packer').startup(function(use)
     -- Packer can manage itself
     use 'wbthomason/packer.nvim'
 
-    -- ColorScheme
+    -- Nord mode
     use 'shaunsingh/nord.nvim'
 
     -- Statusline
     use 'nvim-lualine/lualine.nvim'
-
-    -- Bufferline
-    use { 'akinsho/bufferline.nvim', tag = "v2.*" }
 
     -- Autopairs
     use 'windwp/nvim-autopairs'
@@ -20,10 +17,13 @@ return require('packer').startup(function(use)
     -- Surrounds
     use { 'kylechui/nvim-surround', tag = '*' }
 
-    -- Plenary (UI component provider)
+    -- Plenary
     use 'nvim-lua/plenary.nvim'
 
-    -- Treesitter (Syntax Highlight)
+    -- Undotree
+    use 'mbbill/undotree'
+
+    -- Treesitter
     use {
         'nvim-treesitter/nvim-treesitter',
         run = function()
@@ -37,4 +37,17 @@ return require('packer').startup(function(use)
         tag = '0.1.0',
         requires = 'nvim-lua/plenary.nvim'
     }
+
+    -- Easymotion for neovim
+    use {
+      'phaazon/hop.nvim',
+      branch = 'v2',
+    }
+
+    -- LSP
+    use 'neovim/nvim-lspconfig'
+    use 'hrsh7th/nvim-cmp'
+    use 'hrsh7th/cmp-nvim-lsp'
+    use 'saadparwaiz1/cmp_luasnip'
+    use 'L3MON4D3/LuaSnip'
 end)

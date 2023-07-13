@@ -3,7 +3,7 @@
 We need to install a few packages before setup,
 1. Xcode
 2. Homebrew
-3. Stow
+3. Python
 
 XCode
 ```sh
@@ -15,9 +15,14 @@ Homebrew
 /bin/sh -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
 
-Stow
+and add brew to the PATH
 ```sh
-/opt/homebrew/bin/brew install stow
+export PATH="/opt/homebrew/bin/brew:$PATH"
+```
+
+Python
+```sh
+brew install python3
 ```
 
 # Setup
@@ -29,19 +34,19 @@ cd ~/.dotfiles2
 
 To create the symlink for configuration file use,
 ```sh
-bin/dot-init
+python3 .script/init.py
 ```
 
 To remove the symlink for configuration file use,
 ```sh
-bin/dot-deinit
+python3 .script/deinit.py
 ```
 
 # Recommendation
 
 Font family: [Victor Mono](https://rubjo.github.io/victor-mono/)
 
-## Better shell: Fish
+### Better shell: Fish
 ```sh
 /opt/homebrew/bin/brew install fish
 ```
@@ -51,29 +56,29 @@ echo '/opt/homebrew/bin/fish' | sudo tee -a /etc/shells
 chsh -s /opt/homebrew/bin/fish
 ```
 
-## Nice terminal emulator: Alacritty
+### Nice terminal emulator: Alacritty
 ```sh
 /opt/homebrew/bin/brew install --cask alacritty
 ```
 
-## Pretty ls: exa (alias as `ls`)
+### Pretty ls: exa (alias as `ls`)
 ```sh
 brew install exa
 ```
 
-## Auto completion: bash-completion
+### Auto completion: bash-completion
 ```sh
 brew install bash-completion
 echo set completion-ignore-case on | sudo tee -a /etc/inputrc
 ```
 
-## Fash Directory hopping: z
+### Fash Directory hopping: z
 ```sh
 brew install fisher
 fisher install jethrokuan/z
 ```
 
-## Text Editor: nvim (alias as `vi`)
+### Text Editor: nvim (alias as `vi`)
 ```sh
 brew install neovim
 ```
@@ -84,12 +89,12 @@ git clone --depth 1 https://github.com/wbthomason/packer.nvim \
     ~/.local/share/nvim/site/pack/packer/start/packer.nvim
 ```
 
-## File explorer: ranger (alias as `re`)
+### File explorer: ranger (alias as `re`)
 ```sh
 brew install ranger
 ```
 
-## Git client: lazygit (alias as `lg`)
+### Git client: lazygit (alias as `lg`)
 ```sh
 brew install lazygit
 ```

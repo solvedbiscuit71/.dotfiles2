@@ -2,9 +2,12 @@
 .DS_Store
 
 # ignore defaults
-fish/.config/fish/fish_variables
-fish/.config/fish/conf.d/*
-fish/.config/fish/functions/__z*
+fish/fish_variables
+fish/conf.d/*
+fish/functions/__z*
 
 # ignore packer's plugin
-nvim/.config/nvim/plugin
+nvim/plugin/*
+
+# ignore backups
+.backup/*
