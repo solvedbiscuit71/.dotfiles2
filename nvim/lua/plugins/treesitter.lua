@@ -1,5 +1,14 @@
 require('nvim-treesitter.configs').setup {
-    ensure_installed = {'lua', 'fish', 'vim', 'yaml', 'markdown'},
+    ensure_installed = {
+        'css',
+        'gitignore',
+        'html',
+        'javascript',
+        'lua',
+        'markdown',
+        'python',
+        'yaml',
+    },
     sync_install = true,
     auto_install = true,
 
