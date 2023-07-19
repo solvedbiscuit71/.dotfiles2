@@ -127,3 +127,7 @@ yabai --restart-service
 skhd -r
 ```
 
+To disable animation when automatically hide and show Dock, use
+```sh
+defaults write com.apple.dock autohide-time-modifier -int 0; killall Dock
+```
