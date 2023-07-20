@@ -8,6 +8,7 @@ fish/functions/__z*
 
 # ignore packer's plugin
 nvim/plugin/*
+nvim/lua/protocals/server.lua
 
 # ignore backups
 .backup/*
