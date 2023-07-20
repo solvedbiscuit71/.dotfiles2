@@ -94,6 +94,17 @@ if :PackerInstall command is not avaiable, execute
 :source ~/.config/nvim/lua/plugins/init.lua
 ```
 
+for lsp support, create a file `~/.config/nvim/lua/protocals/server.lua` which
+returns a table of supported lsp server names
+```lua
+-- sample server.lua
+return {
+    'html',
+    'cssls',
+    'tsserver',
+}
+```
+
 ### File explorer: ranger (alias as `re`)
 ```sh
 brew install ranger
