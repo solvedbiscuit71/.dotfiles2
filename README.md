@@ -138,7 +138,23 @@ yabai --restart-service
 skhd -r
 ```
 
-To disable animation when automatically hide and show Dock, use
+### Disable animation when automatically hide and show Dock, use
+
 ```sh
 defaults write com.apple.dock autohide-time-modifier -int 0; killall Dock
 ```
+
+### Disable yabai from managing specific application, we can set rules in yabai
+
+```sh
+#!/opt/homebrew/bin/fish
+
+yabai -m rule --add app="^Archive Utility\$" manage=off
+yabai -m rule --add app="^Digital Colour Meter\$" manage=off sticky=on
+yabai -m rule --add app="^Finder\$" manage=off
+```
+
+Create a new file named `load_yabai_ruleset` with the above contents and make it a executable `chmod +x load_yabai_ruleset`
+and place it inside the .script/ directory.
+
+Now, when restaring yabai don't forget to run the load_yabai_ruleset script.
