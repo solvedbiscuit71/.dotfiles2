@@ -1,4 +1,4 @@
-set PATH "/opt/homebrew/bin/" "$HOME/.dotfiles2/bin/" $PATH
+set PATH "/opt/homebrew/bin/" "$HOME/.dotfiles2/.script/" $PATH
 
 alias vi="nvim"
 alias re="ranger"
