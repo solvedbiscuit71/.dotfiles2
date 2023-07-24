@@ -16,3 +16,6 @@ require "plugins.undotree"
 -- loading lsp configuration
 require "protocals"
 require "protocals.cmp"
+
+-- loading custom functions
+require "functions"
