@@ -1,9 +1,12 @@
+.script/*
 .backup/*
 fish/conf.d/*
 fish/functions/__z*
 nvim/plugin/*
 
 .DS_Store
-.script/load_yabai_ruleset
 fish/fish_variables
 nvim/lua/protocals/server.lua
+
+!.script/init.py
+!.script/deinit.py
