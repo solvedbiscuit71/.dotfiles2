@@ -1,10 +1,11 @@
 set PATH "/opt/homebrew/bin/" "$HOME/.dotfiles2/.script/" $PATH
+set -gx VISUAL "nvim"
 
-alias vi="nvim"
-alias re="ranger"
-alias lg="lazygit"
+alias v="nvim"
+alias n="nnn -e"
+alias g="lazygit"
 
-alias ls="exa -l -s type --no-user --git"
+alias l="exa -l -s type --no-user --git"
 alias q="exit"
 
 # ghcup configuration
