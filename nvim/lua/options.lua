@@ -5,6 +5,7 @@ vim.opt.background = 'dark'
 vim.opt.backup = false
 vim.opt.bufhidden = 'hide'
 vim.opt.clipboard = ''
+vim.opt.colorcolumn = '80'
 vim.opt.completeopt = 'menuone,noselect'
 vim.opt.conceallevel = 0
 vim.opt.cursorcolumn = true
