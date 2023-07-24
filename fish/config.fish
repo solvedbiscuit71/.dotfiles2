@@ -2,7 +2,7 @@ set PATH "/opt/homebrew/bin/" "$HOME/.dotfiles2/.script/" $PATH
 set -gx VISUAL "nvim"
 
 alias v="nvim"
-alias n="nnn -e"
+alias n="nnn -e -H"
 alias g="lazygit"
 
 alias l="exa -l -s type --no-user --git"
