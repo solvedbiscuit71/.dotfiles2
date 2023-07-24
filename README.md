@@ -61,7 +61,7 @@ chsh -s /opt/homebrew/bin/fish
 /opt/homebrew/bin/brew install --cask alacritty
 ```
 
-### Pretty ls: exa (alias as `ls`)
+### Pretty ls: exa (alias as `l`)
 ```sh
 brew install exa
 ```
@@ -78,7 +78,7 @@ brew install fisher
 fisher install jethrokuan/z
 ```
 
-### Text Editor: nvim (alias as `vi`)
+### Text Editor: nvim (alias as `v`)
 ```sh
 brew install neovim
 ```
@@ -105,12 +105,12 @@ return {
 }
 ```
 
-### File explorer: ranger (alias as `re`)
+### File explorer: nnn (alias as `n`)
 ```sh
-brew install ranger
+brew install nnn
 ```
 
-### Git client: lazygit (alias as `lg`)
+### Git client: lazygit (alias as `g`)
 ```sh
 brew install lazygit
 ```
