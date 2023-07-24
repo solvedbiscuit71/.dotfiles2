@@ -1,4 +1,4 @@
-function nb
+function notebook
     echo "running jupyter notebook at http://localhost:8888/tree"
     echo "press ^C to terminate"
 
