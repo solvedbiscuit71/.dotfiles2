@@ -1,4 +1,4 @@
-function nd --wraps nnn --description 'support nnn quit and change directory'
+function n --wraps nnn --description 'support nnn quit and change directory'
     # Block nesting of nnn in subshells
     if test -n "$NNNLVL" -a "$NNNLVL" -ge 1
         echo "nnn is already running"
@@ -10,9 +10,9 @@ function nd --wraps nnn --description 'support nnn quit and change directory'
     # see. To cd on quit only on ^G, remove the "-x" from both lines below,
     # without changing the paths.
     if test -n "$XDG_CONFIG_HOME"
-        set -x NNN_TMPFILE "$XDG_CONFIG_HOME/nnn/.lastd"
+        set NNN_TMPFILE "$XDG_CONFIG_HOME/nnn/.lastd"
     else
-        set -x NNN_TMPFILE "$HOME/.config/nnn/.lastd"
+        set NNN_TMPFILE "$HOME/.config/nnn/.lastd"
     end
 
     # Unmask ^Q (, ^V etc.) (if required, see `stty -a`) to Quit nnn
@@ -23,7 +23,7 @@ function nd --wraps nnn --description 'support nnn quit and change directory'
 
     # The command function allows one to alias this function to `nnn` without
     # making an infinitely recursive alias
-    command nnn -e -H $argv
+    command nnn -e $argv
 
     if test -e $NNN_TMPFILE
         source $NNN_TMPFILE
