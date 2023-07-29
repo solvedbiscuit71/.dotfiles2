@@ -22,18 +22,11 @@ shift + alt - 2 : yabai -m window --space 2; yabai -m space --focus 2
 shift + alt - 3 : yabai -m window --space 3; yabai -m space --focus 3
 shift + alt - 4 : yabai -m window --space 4; yabai -m space --focus 4
 
-# toggle float
-alt - t : yabai -m window --toggle float;\
-          yabai -m window --grid 6:6:1:1:4:4
-
-# toggle window split type
+# miscellaneous
+alt - c : yabai -m window --grid 6:6:1:1:4:4
 alt - e : yabai -m window --toggle split
-
-# toggle window fullscreen zoom
 alt - f : yabai -m window --toggle zoom-fullscreen
+alt - t : yabai -m window --toggle float; yabai -m window --grid 6:6:1:1:4:4
 
-# balance size of windows
-shift + alt - 0 : yabai -m space --balance
-
-# fast focus desktop
 alt - tab : yabai -m space --focus recent
+shift + alt - 0 : yabai -m space --balance
