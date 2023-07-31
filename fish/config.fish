@@ -17,5 +17,5 @@ eval $(opam env)
 alias v="nvim"
 alias g="lazygit"
 
-alias l="exa -1 --no-user --sort Name"
+alias l="exa -1 --no-user -s name -s type"
 alias q="exit"
