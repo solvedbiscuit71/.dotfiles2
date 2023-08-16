@@ -19,3 +19,8 @@ alias g="lazygit"
 
 alias l="exa -1 --no-user -s name -s type"
 alias q="exit"
+
+# add newline post execution
+function postexec_test --on-event fish_postexec
+   echo
+end

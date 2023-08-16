@@ -1,3 +1,4 @@
 function fish_prompt
-    echo (prompt_login) (basename (prompt_pwd)) "\$ "
+    echo (prompt_login) (prompt_pwd)
+    echo "~> "
 end
