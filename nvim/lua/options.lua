@@ -5,7 +5,7 @@ vim.opt.background = 'dark'
 vim.opt.backup = false
 vim.opt.bufhidden = 'hide'
 vim.opt.clipboard = ''
-vim.opt.colorcolumn = '80'
+-- vim.opt.colorcolumn = '80'
 vim.opt.completeopt = 'menuone,noselect'
 vim.opt.conceallevel = 0
 vim.opt.cursorcolumn = true
@@ -34,5 +34,5 @@ vim.opt.wrap = false
 vim.opt.writebackup = false
 
 -- colorscheme
-vim.cmd([[colorscheme nord]])
+vim.cmd([[colorscheme habamax]])
 vim.cmd([[hi Normal guibg=NONE ctermbg=NONE]])
