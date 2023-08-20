@@ -72,10 +72,9 @@ brew install bash-completion
 echo set completion-ignore-case on | sudo tee -a /etc/inputrc
 ```
 
-### Fash Directory hopping: z
+### Fast Directory hopping: jump
 ```sh
-brew install fisher
-fisher install jethrokuan/z
+brew install jump
 ```
 
 ### Text Editor: nvim (alias as `v`)
