@@ -1,3 +1,4 @@
+local global = vim.g
 local opt = vim.opt
 local api = vim.api
 
@@ -35,6 +36,13 @@ opt.updatetime = 300
 opt.wrap = false
 opt.writebackup = false
 
+global.nord_contrast = false
+global.nord_borders = true
+global.nord_disable_background = true
+global.nord_italic = false
+global.nord_uniform_diff_background = true
+global.nord_bold = true
+
 -- colorscheme
-api.nvim_command('colorscheme habamax')
+api.nvim_command('colorscheme nord')
 api.nvim_command('hi Normal guibg=NONE ctermbg=NONE')

@@ -3,7 +3,7 @@ require('lualine').setup {
         icons_enabled = false,
         component_separators = '',
         section_separators = '',
-        theme = 'seoul256',
+        theme = 'nord',
     },
     sections = {
         lualine_a = {'mode'},
