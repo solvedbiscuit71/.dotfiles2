@@ -45,6 +45,8 @@ return require('packer').startup(function(use)
       branch = 'v2',
     }
 
+    use 'luukvbaal/nnn.nvim'
+
     -- LSP
     use 'neovim/nvim-lspconfig'
     use 'hrsh7th/nvim-cmp'

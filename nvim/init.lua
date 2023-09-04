@@ -12,6 +12,7 @@ require "plugins.surround"
 require "plugins.telescope"
 require "plugins.treesitter"
 require "plugins.undotree"
+require "plugins.nnn"
 
 -- loading lsp configuration
 require "protocals"
