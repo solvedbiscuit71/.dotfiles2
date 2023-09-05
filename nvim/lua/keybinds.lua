@@ -4,6 +4,7 @@ local opts = { silent = true }
 vim.g.mapleader = ' '
 
 vim.keymap.set('i', 'jj', '<ESC>', opts)
+vim.keymap.set('n', 'qq', '<cmd>qa<CR>', opts)
 
 vim.keymap.set('n', '<C-b>', '<C-^>', opts)
 vim.keymap.set('n', '<leader>t', '<cmd>term fish<CR>', opts)
