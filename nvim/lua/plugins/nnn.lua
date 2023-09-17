@@ -19,3 +19,5 @@ require("nnn").setup({
     },
     quitcd = "cd",
 })
+
+vim.keymap.set('n', '<leader>n', '<cmd>NnnPicker<CR>', opts)

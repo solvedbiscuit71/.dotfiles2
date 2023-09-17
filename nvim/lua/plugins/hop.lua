@@ -5,4 +5,4 @@ hop.setup {
     multi_windows = true,
 }
 
-vim.keymap.set('n', '<leader>c', hop.hint_char1, { silent = true })
+vim.keymap.set({'n','v','o'}, 'go', hop.hint_char1, { silent = true })
