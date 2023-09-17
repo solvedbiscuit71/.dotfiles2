@@ -17,6 +17,9 @@ return require('packer').startup(function(use)
     -- Surrounds
     use { 'kylechui/nvim-surround', tag = '*' }
 
+    -- Substitute
+    use { 'gbprod/substitute.nvim' }
+
     -- Plenary
     use 'nvim-lua/plenary.nvim'
 
@@ -45,6 +48,7 @@ return require('packer').startup(function(use)
       branch = 'v2',
     }
 
+    -- nnn file explorer
     use 'luukvbaal/nnn.nvim'
 
     -- LSP
