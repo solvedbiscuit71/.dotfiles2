@@ -1,23 +1,10 @@
 -- loading vim configuration
-require "options"
-require "keybinds"
+require 'plugins'
 
--- loading plugins configuration
-require "plugins"
-require "plugins.autopairs"
-require "plugins.comment"
-require "plugins.hop"
-require "plugins.lualine"
-require "plugins.surround"
-require "plugins.substitute"
-require "plugins.telescope"
-require "plugins.treesitter"
-require "plugins.undotree"
-require "plugins.nnn"
+require 'options'
+require 'keybinds'
 
--- loading lsp configuration
-require "protocals"
-require "protocals.cmp"
+require 'plugins.lsp'
+require 'plugins.config'
 
--- loading custom functions
-require "functions"
+require 'custom_commands'

@@ -43,3 +43,9 @@ vim.g.nord_bold = false
 -- colorscheme
 vim.api.nvim_command('colorscheme nord')
 vim.api.nvim_command('hi Normal guibg=NONE ctermbg=NONE')
+
+-- terminal
+vim.api.nvim_command("autocmd TermOpen * startinsert")
+vim.api.nvim_command("autocmd TermOpen * setlocal nonumber norelativenumber")
+vim.api.nvim_command("autocmd TermOpen * nnoremap <buffer> <C-c> i<C-c>")
+vim.api.nvim_command("autocmd TermEnter * setlocal signcolumn=no")

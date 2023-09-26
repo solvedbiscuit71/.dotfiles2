@@ -1,7 +1,9 @@
+require 'plugins.lsp.cmp'
+
 local lspconfig = require('lspconfig')
 
-if pcall(require, 'protocals.server') then
-    local servers = require('protocals.server')
+if pcall(require, 'plugins.lsp.server') then
+    local servers = require('plugins.lsp.server')
     local capabilities = require('cmp_nvim_lsp').default_capabilities()
 
     for _, lsp in ipairs(servers) do
