@@ -10,11 +10,6 @@ require('telescope').setup {
             '^.git/',
             '^node_modules/',
         },
-        mappings = {
-          i = {
-              ['<esc>'] = actions.close,
-          },
-        },
     },
     pickers = {
         find_files = {
@@ -29,3 +24,4 @@ require('telescope').setup {
 require('telescope').load_extension('yank_history')
 
 vim.keymap.set('n', '<leader>f', builtin.find_files, opts)
+vim.keymap.set('n', '<leader>g', builtin.live_grep, opts)
