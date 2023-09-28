@@ -1,6 +1,8 @@
 local actions = require('telescope.actions')
 local builtin = require('telescope.builtin')
+local opts = { silent = true }
 
+-- Load telescope
 require('telescope').setup {
     defaults = {
         disable_devicons = true,
@@ -23,9 +25,7 @@ require('telescope').setup {
     },
 }
 
-local opts = { silent = true }
+-- load extensions
+require('telescope').load_extension('yank_history')
 
 vim.keymap.set('n', '<leader>f', builtin.find_files, opts)
-vim.keymap.set('n', '<leader>b', builtin.buffers, opts)
-vim.keymap.set('n', '<leader>r', builtin.oldfiles, opts)
-vim.keymap.set('n', '<leader>s', builtin.live_grep, opts)

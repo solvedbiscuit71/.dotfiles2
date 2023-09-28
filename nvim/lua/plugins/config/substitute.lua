@@ -1,5 +1,5 @@
 require('substitute').setup {
-    on_substitute = nil,
+    on_substitute = require('yanky.integration').substitute(),
     yank_substituted_text = false,
     highlight_substituted_text = {
         enabled = false,

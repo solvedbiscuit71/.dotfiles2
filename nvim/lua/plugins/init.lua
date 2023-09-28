@@ -17,6 +17,9 @@ return require('packer').startup(function(use)
     -- Surrounds
     use { 'kylechui/nvim-surround', tag = '*' }
 
+    -- Clipboard History
+    use { 'gbprod/yanky.nvim' }
+
     -- Substitute
     use { 'gbprod/substitute.nvim' }
 
