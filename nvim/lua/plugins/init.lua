@@ -18,10 +18,10 @@ return require('packer').startup(function(use)
     use { 'kylechui/nvim-surround', tag = '*' }
 
     -- Clipboard History
-    use { 'gbprod/yanky.nvim' }
+    use 'gbprod/yanky.nvim'
 
     -- Substitute
-    use { 'gbprod/substitute.nvim' }
+    use 'gbprod/substitute.nvim'
 
     -- Plenary
     use 'nvim-lua/plenary.nvim'
