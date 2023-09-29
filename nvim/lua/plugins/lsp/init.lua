@@ -3,15 +3,8 @@ require 'plugins.lsp.cmp'
 local lspconfig = require('lspconfig')
 
 if pcall(require, 'plugins.lsp.server') then
-    local servers = require('plugins.lsp.server')
-    local capabilities = require('cmp_nvim_lsp').default_capabilities()
-
-    for _, lsp in ipairs(servers) do
-        lspconfig[lsp].setup {
-            capabilities = capabilities,
-            single_file_support = true,
-        }
-    end
+    -- load server configuration
+    require('plugins.lsp.server')
 end
 
 vim.api.nvim_create_autocmd('LspAttach', {
@@ -19,7 +12,7 @@ vim.api.nvim_create_autocmd('LspAttach', {
     callback = function(ev)
         local opts = { buffer = ev.buf, silent = true }
 
-        vim.keymap.set('i', '<C-k>', vim.lsp.buf.signature_help, opts)
+        vim.keymap.set({'n', 'i'}, '<C-k>', vim.lsp.buf.signature_help, opts)
         vim.keymap.set('n', '[d', vim.diagnostic.goto_prev)
         vim.keymap.set('n', ']d', vim.diagnostic.goto_next)
         vim.keymap.set('n', 'K', vim.lsp.buf.hover, opts)
@@ -28,5 +21,6 @@ vim.api.nvim_create_autocmd('LspAttach', {
         vim.keymap.set('n', 'gd', vim.lsp.buf.definition, opts)
         vim.keymap.set('n', 'gi', vim.lsp.buf.implementation, opts)
         vim.keymap.set('n', 'gR', vim.lsp.buf.references, opts)
+        vim.keymap.set({ 'n', 'v' }, '<space>ca', vim.lsp.buf.code_action, opts)
     end,
 })
