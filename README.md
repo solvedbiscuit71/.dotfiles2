@@ -56,6 +56,8 @@ echo '/opt/homebrew/bin/fish' | sudo tee -a /etc/shells
 chsh -s /opt/homebrew/bin/fish
 ```
 
+For additional config, create `~/.dotfiles2/fish/custom_config.fish`
+
 ### Nice terminal emulator: Alacritty
 ```sh
 /opt/homebrew/bin/brew install --cask alacritty
@@ -93,15 +95,23 @@ if :PackerInstall command is not available, execute
 :source ~/.config/nvim/lua/plugins/init.lua
 ```
 
-for lsp support, create a file `~/.config/nvim/lua/protocals/server.lua` which
-returns a table of supported lsp server names
+for lsp support, create `~/.config/nvim/lua/protocals/server.lua` for configuring the lsp server
 ```lua
--- sample server.lua
-return {
-    'html',
-    'cssls',
-    'tsserver',
+local lspconfig = require('lspconfig')
+local capabilities = require('cmp_nvim_lsp').default_capabilities()
+local servers = {
+    'pylsp',
+    'clangd',
+    'rust_analyzer',
+    -- and more
 }
+
+for _, lsp in ipairs(servers) do
+    lspconfig[lsp].setup {
+        capabilities = capabilities,
+        single_file_support = true,
+    }
+end
 ```
 
 ### File explorer: nnn (alias as `n`)
@@ -152,8 +162,3 @@ yabai -m rule --add app="^Archive Utility\$" manage=off
 yabai -m rule --add app="^Digital Colour Meter\$" manage=off sticky=on
 yabai -m rule --add app="^Finder\$" manage=off
 ```
-
-Create a new file named `load_yabai_ruleset` with the above contents and make it a executable `chmod +x load_yabai_ruleset`
-and place it inside the .script/ directory.
-
-Now, when restaring yabai don't forget to run the load_yabai_ruleset script.
