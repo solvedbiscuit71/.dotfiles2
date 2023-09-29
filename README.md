@@ -88,7 +88,7 @@ git clone --depth 1 https://github.com/wbthomason/packer.nvim \
     ~/.local/share/nvim/site/pack/packer/start/packer.nvim
 ```
 
-if :PackerInstall command is not avaiable, execute
+if :PackerInstall command is not available, execute
 ```vim
 :source ~/.config/nvim/lua/plugins/init.lua
 ```
