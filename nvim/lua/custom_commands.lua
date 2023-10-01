@@ -12,5 +12,10 @@ function snap_mode()
     vim.opt.scrolloff = 0
 end
 
+function format_document()
+    vim.lsp.buf.format { async = true }
+end
+
 vim.cmd([[command! SnapMode lua snap_mode()]])
 vim.cmd([[command! NoSnapMode lua no_snap_mode()]])
+vim.cmd([[command! Format lua format_document()]])
