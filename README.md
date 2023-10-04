@@ -42,60 +42,73 @@ To remove the symlink for configuration file use,
 python3 .script/deinit.py
 ```
 
-# Recommendation
+## Font family
 
-Font family: [Victor Mono](https://rubjo.github.io/victor-mono/)
+I personally like to use [Victor Mono](https://rubjo.github.io/victor-mono/) which has all the modern features such an font
+ligature and italics (though it doesn't have nerd-icon)
 
-### Better shell: Fish
+## Shell
 ```sh
-/opt/homebrew/bin/brew install fish
+brew install bash fish
 ```
 
 ```sh
+echo '/opt/homebrew/bin/bash' | sudo tee -a /etc/shells
 echo '/opt/homebrew/bin/fish' | sudo tee -a /etc/shells
-chsh -s /opt/homebrew/bin/fish
+chsh -s /opt/homebrew/bin/bash
 ```
 
-For additional config, create `~/.dotfiles2/fish/custom_config.fish`
+For adding environment variable based on your development setup without cluttering your .bashrc or config.fish
+use the ~/.bash_extra and ~/.config/custom_config.fish files which are automatically sourced.
 
-### Nice terminal emulator: Alacritty
-```sh
-/opt/homebrew/bin/brew install --cask alacritty
+### Bash (only)
+To enable bash configuration you need to execute a seperate init script from the .script directory
+```
+bash ~/.dotfiles2/.script/init_bash
 ```
 
-### Pretty ls: exa (alias as `l`)
-```sh
-brew install exa
-```
-
-### Auto completion: bash-completion
+For autocompletion in bash, run the following commands
 ```sh
 brew install bash-completion
 echo set completion-ignore-case on | sudo tee -a /etc/inputrc
 ```
 
-### Fast Directory hopping: jump
+### Terminal emulator
+```sh
+brew install --cask alacritty
+```
+
+### Pretty ls
+exa is a replacement for the traditional ls. we use the alias `l` for executing exa
+```sh
+brew install exa
+```
+
+
+## Fast cd
+jump is a easy to use fuzzy finder for changing your current directory
 ```sh
 brew install jump
 ```
 
-### Text Editor: nvim (alias as `v`)
+## Text editor
+neovim is the best text editor (in my opinion) for the terminal. we use the alias `v` for running neovim
 ```sh
 brew install neovim
 ```
 
-we also need to download the plugin manager for neovim (i.e Packer)
+We need to download the plugin manager for neovim (i.e Packer) before entering into neovim
 ```sh
 git clone --depth 1 https://github.com/wbthomason/packer.nvim \
     ~/.local/share/nvim/site/pack/packer/start/packer.nvim
 ```
 
-if :PackerInstall command is not available, execute
+If :PackerInstall command is not available, execute
 ```vim
 :source ~/.config/nvim/lua/plugins/init.lua
 ```
 
-for lsp support, create `~/.config/nvim/lua/protocals/server.lua` for configuring the lsp server
+For configuring your lsp, create a server.lua inside the lsp folder which will be automatically sourced
 ```lua
 local lspconfig = require('lspconfig')
 local capabilities = require('cmp_nvim_lsp').default_capabilities()
@@ -114,17 +127,19 @@ for _, lsp in ipairs(servers) do
 end
 ```
 
-### File explorer: nnn (alias as `n`)
+## File explorer
+nnn is a awesome terminal based file explorer, we use the alias `n` for invoke nnn with some useful arguments
 ```sh
 brew install nnn
 ```
 
-### Git client: lazygit (alias as `g`)
+## Git client
+lazygit is a terminal based git client, we use the alias `g` for invoke lazygit
 ```sh
 brew install lazygit
 ```
 
-## Tiling Window manager
+## Tiling window manager
 
 ```sh
 brew install yabai skhd
@@ -156,7 +171,7 @@ defaults write com.apple.dock autohide-time-modifier -int 0; killall Dock
 ### Disable yabai from managing specific application, we can set rules in yabai
 
 ```sh
-#!/opt/homebrew/bin/fish
+#!/opt/homebrew/bin/bash
 
 yabai -m rule --add app="^Archive Utility\$" manage=off
 yabai -m rule --add app="^Digital Colour Meter\$" manage=off sticky=on
