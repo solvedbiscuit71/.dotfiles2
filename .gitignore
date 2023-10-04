@@ -11,3 +11,4 @@ nvim/lua/plugins/lsp/server.lua
 
 !.script/init.py
 !.script/deinit.py
+!.script/init_bash
