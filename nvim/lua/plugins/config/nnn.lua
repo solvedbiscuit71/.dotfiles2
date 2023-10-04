@@ -2,7 +2,7 @@ local builtin = require("nnn").builtin
 
 require("nnn").setup({
     picker = {
-        cmd = "nnn -C",
+        cmd = "nnn -C -H",
         style = {
             border = "rounded",
         },
