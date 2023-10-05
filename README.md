@@ -47,6 +47,17 @@ python3 .script/deinit.py
 I personally like to use [Victor Mono](https://rubjo.github.io/victor-mono/) which has all the modern features such an font
 ligature and italics (though it doesn't have nerd-icon)
 
+After downloading the victor-mono.zip file, extract and move all the files inside TTF directory to ~/.local/share/fonts
+```sh
+sudo cp ~/Download/TTF/* ~/.local/share/fonts       # To make it available current user
+sudo cp ~/Download/TTF/* /usr/local/share/fonts     # To make it available system-wide
+```
+
+And then refresh system's cache or restart your system
+```sh
+fc-cache -f -v
+```
+
 ## Shell
 ```sh
 brew install bash fish
