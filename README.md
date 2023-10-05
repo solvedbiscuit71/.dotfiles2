@@ -1,4 +1,4 @@
-# Prerequisites
+# Prerequisites (macOS)
 
 We need to install a few packages before setup,
 1. Xcode
@@ -25,6 +25,36 @@ Python
 brew install python3
 ```
 
+# Prerequisites (linux)
+
+We need to update the system packages before proceeding
+```sh
+sudo apt update
+sudo apt upgrade
+```
+
+We need to install git version control for install linuxbrew
+```sh
+sudo apt install build-essentials git curl
+```
+
+Now, download the installer and install linuxbrew
+```sh
+curl -fsSL -o install.sh https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh
+/bin/bash install.sh
+```
+
+Run the following command to source linuxbrew
+```sh
+echo 'eval "$(/home/sammy/.linuxbrew/bin/brew shellenv)"' >> .bash_extra
+eval "$(/home/sammy/.linuxbrew/bin/brew shellenv)"
+```
+
+After installing, linuxbrew it's recommended that you install the following packages
+```sh
+brew install gcc git python3
+```
+
 # Setup
 
 ```sh
@@ -46,6 +76,8 @@ python3 .script/deinit.py
 
 I personally like to use [Victor Mono](https://rubjo.github.io/victor-mono/) which has all the modern features such an font
 ligature and italics (though it doesn't have nerd-icon)
+
+### Linux (only)
 
 After downloading the victor-mono.zip file, extract and move all the files inside TTF directory to ~/.local/share/fonts
 ```sh
