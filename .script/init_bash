@@ -2,3 +2,4 @@
 
 ln $HOME/.dotfiles2/bash/.bashrc $HOME/.bashrc
 ln $HOME/.dotfiles2/bash/.bashrc $HOME/.bash_profile
+ln $HOME/.dotfiles2/bash/.inputrc $HOME/.inputrc

@@ -1,8 +1,13 @@
 # .env
 export PS1="\[\e[32m\]\u\[\e[m\]@\h \[\e[34m\]\W\[\e[m\] \\$ "
-export HISTCONTROL=ignorespace
 export VISUAL=nvim
-bind "TAB:menu-complete"
+
+# bash
+HISTCONTROL=ignorespace
+HISTFILESIZE=
+HISTSIZE=
+HISTTIMEFORMAT="%F %T "
+stty -ixon
 
 # PATH
 export PATH=/opt/homebrew/bin:/opt/homebrew/sbin:$HOME/.dotfiles2/.script:$PATH
