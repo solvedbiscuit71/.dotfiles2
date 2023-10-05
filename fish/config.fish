@@ -1,5 +1,5 @@
 # path configuration
-set -gx PATH /opt/homebrew/bin/ $HOME/.dotfiles2/.script/ $PATH
+set -gx PATH /opt/homebrew/sbin /opt/homebrew/bin $HOME/.dotfiles2/.script $PATH
 set -gx VISUAL "nvim"
 
 # aliases
