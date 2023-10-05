@@ -10,8 +10,8 @@ alias l="exa -1 --no-user -s name -s type"
 alias q="exit"
 
 # load add-ons
-if test -e $HOME/.config/fish/custom_config.fish
-    source $HOME/.config/fish/custom_config.fish
+if test -e $HOME/.fish_extra
+    source $HOME/.fish_extra
 end
 
 # add newline post execution

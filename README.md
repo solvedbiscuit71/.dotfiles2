@@ -59,7 +59,7 @@ chsh -s /opt/homebrew/bin/bash
 ```
 
 For adding environment variable based on your development setup without cluttering your .bashrc or config.fish
-use the ~/.bash_extra and ~/.config/custom_config.fish files which are automatically sourced.
+use the ~/.bash_extra and ~/.fish_extra files which are automatically sourced.
 
 ### Bash (only)
 To enable bash configuration you need to execute a seperate init script from the .script directory
