@@ -127,9 +127,9 @@ brew install --cask alacritty
 ```
 
 ### Pretty ls
-exa is a replacement for the traditional ls. we use the alias `l` for executing exa
+lsd is a replacement for the traditional ls. we use the alias `l` for executing exa
 ```sh
-brew install exa
+brew install lsd
 ```
 
 

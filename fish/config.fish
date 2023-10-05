@@ -6,7 +6,7 @@ set -gx VISUAL "nvim"
 alias v="nvim"
 alias g="lazygit"
 
-alias l="exa -1 --no-user -s name -s type"
+alias l="lsd -1 --icon never"
 alias q="exit"
 
 # load add-ons

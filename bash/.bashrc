@@ -16,7 +16,7 @@ export PATH=/opt/homebrew/bin:/opt/homebrew/sbin:$HOME/.dotfiles2/.script:$PATH
 alias v="nvim"
 alias g="lazygit"
 alias n="nnn -CH -e"
-alias l="exa -1 --no-user -s name -s type"
+alias l="lsd -1 --icon never"
 alias q="exit"
 
 # extra
