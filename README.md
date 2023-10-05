@@ -73,6 +73,11 @@ brew install bash-completion
 echo set completion-ignore-case on | sudo tee -a /etc/inputrc
 ```
 
+One caveats is to add the following line to your ~/.bash_extra
+```sh
+  [[ -r "/opt/homebrew/etc/profile.d/bash_completion.sh" ]] && . "/opt/homebrew/etc/profile.d/bash_completion.sh"
+```
+
 ### Terminal emulator
 ```sh
 brew install --cask alacritty
