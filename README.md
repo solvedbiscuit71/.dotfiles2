@@ -91,6 +91,13 @@ jump is a easy to use fuzzy finder for changing your current directory
 brew install jump
 ```
 
+After installation you need to source the jump shellevn add the following lines
+inside ~/.bash_extra or ~/.fish_extra
+```sh
+eval "$(jump shell bash)"   # If bash
+jump shell fish | source    # If fish
+```
+
 ## Text editor
 neovim is the best text editor (in my opinion) for the terminal. we use the alias `v` for running neovim
 ```sh

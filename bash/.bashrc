@@ -7,8 +7,7 @@ bind "TAB:menu-complete"
 # PATH
 export PATH=/opt/homebrew/bin:$HOME/.dotfiles2/.script:$PATH
 
-# jump
-eval "$(jump shell bash)"
+export PATH=/opt/homebrew/bin:/opt/homebrew/sbin:$HOME/.dotfiles2/.script:$PATH
 
 # alias
 alias v="nvim"

@@ -2,9 +2,6 @@
 set -gx PATH /opt/homebrew/bin/ $HOME/.dotfiles2/.script/ $PATH
 set -gx VISUAL "nvim"
 
-# jump configuration
-jump shell fish | source
-
 # aliases
 alias v="nvim"
 alias g="lazygit"
