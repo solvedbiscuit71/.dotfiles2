@@ -105,11 +105,6 @@ For adding environment variable based on your development setup without clutteri
 use the ~/.bash_extra and ~/.fish_extra files which are automatically sourced.
 
 ### Bash (only)
-To enable bash configuration you need to execute a seperate init script from the .script directory
-```
-bash ~/.dotfiles2/.script/init_bash
-```
-
 For autocompletion in bash, run the following commands
 ```sh
 brew install bash-completion
