@@ -4,10 +4,10 @@ import shutil
 """
 global constant
 """
-HOME = os.environ.get("HOME")
 SEP = os.sep
-CONFIG = HOME + SEP + '.config' + SEP
-DOTFILES = HOME + SEP + '.dotfiles2' + SEP
+HOME = os.environ.get("HOME") + SEP
+CONFIG = f"{HOME}.config{SEP}"
+DOTFILES = f"{HOME}.dotfiles2{SEP}"
 
 
 config_folders = list(filter(
@@ -65,7 +65,7 @@ for folder in config_folders:
 for [folder, files] in config_files.items():
     for file in files:
         src = f"{DOTFILES}{folder}{SEP}{file}"
-        dst = f"{HOME}{SEP}{file}"
+        dst = f"{HOME}{file}"
         if os.path.islink(dst):
             print(f"{dst} already exist")
         else:
