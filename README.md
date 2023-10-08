@@ -95,9 +95,16 @@ fc-cache -f -v
 brew install bash fish
 ```
 
+### macOS
 ```sh
-echo '$HOMEBREW_PREFIX/bin/bash' | sudo tee -a /etc/shells
-chsh -s $HOMEBREW_PREFIX/bin/bash
+echo '/opt/homebrew/bin/bash' | sudo tee -a /etc/shells
+chsh -s /opt/homebrew/bin/bash
+```
+
+### linux
+```sh
+echo '/home/linuxbrew/.linuxbrew/bin/bash' | sudo tee -a /etc/shells
+chsh -s /home/linuxbrew/.linuxbrew/bin/bash
 ```
 
 For adding environment variable based on your development setup without cluttering your .bashrc or config.fish
@@ -112,7 +119,11 @@ echo set completion-ignore-case on | sudo tee -a /etc/inputrc
 
 One caveats is to add the following line to your ~/.bash_extra
 ```sh
-[[ -r "$HOMEBREW_PREFIX/etc/profile.d/bash_completion.sh" ]] && . "$HOMEBREW_PREFIX/etc/profile.d/bash_completion.sh"
+# macOS
+[[ -r "/opt/homebrew/etc/profile.d/bash_completion.sh" ]] && . "/opt/homebrew/etc/profile.d/bash_completion.sh"
+
+# linux
+[[ -r "/home/linuxbrew/.linuxbrew/etc/profile.d/bash_completion.sh" ]] && . "/home/linuxbrew/.linuxbrew/etc/profile.d/bash_completion.sh"
 ```
 
 #### An example .bash_extra
