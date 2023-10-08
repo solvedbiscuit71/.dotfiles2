@@ -95,10 +95,18 @@ fc-cache -f -v
 brew install bash fish
 ```
 
+### macOS
+
 ```sh
 echo '/opt/homebrew/bin/bash' | sudo tee -a /etc/shells
-echo '/opt/homebrew/bin/fish' | sudo tee -a /etc/shells
 chsh -s /opt/homebrew/bin/bash
+```
+
+### linux
+
+```sh
+echo '/home/linuxbrew/.linuxbrew/bin/bash' | sudo tee -a /etc/shells
+chsh -s /home/linuxbrew/.linuxbrew/bin/bash
 ```
 
 For adding environment variable based on your development setup without cluttering your .bashrc or config.fish
@@ -113,7 +121,11 @@ echo set completion-ignore-case on | sudo tee -a /etc/inputrc
 
 One caveats is to add the following line to your ~/.bash_extra
 ```sh
-  [[ -r "/opt/homebrew/etc/profile.d/bash_completion.sh" ]] && . "/opt/homebrew/etc/profile.d/bash_completion.sh"
+# macos
+[[ -r "/opt/homebrew/etc/profile.d/bash_completion.sh" ]] && . "/opt/homebrew/etc/profile.d/bash_completion.sh"
+
+# linux
+[[ -r "/home/linuxbrew/.linuxbrew/etc/profile.d/bash_completion.sh" ]] && . "/home/linuxbrew/.linuxbrew/etc/profile.d/bash_completion.sh"
 ```
 
 ### Terminal emulator
@@ -221,7 +233,7 @@ defaults write com.apple.dock autohide-time-modifier -int 0; killall Dock
 ### Disable yabai from managing specific application, we can set rules in yabai
 
 ```sh
-#!/opt/homebrew/bin/bash
+#!/bin/bash
 
 yabai -m rule --add app="^Archive Utility\$" manage=off
 yabai -m rule --add app="^Digital Colour Meter\$" manage=off sticky=on
