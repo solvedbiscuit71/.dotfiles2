@@ -35,7 +35,7 @@ sudo apt upgrade
 
 We need to install git version control for install linuxbrew
 ```sh
-sudo apt install build-essentials git curl
+sudo apt install build-essential git curl
 ```
 
 Now, download the installer and install linuxbrew
@@ -46,8 +46,8 @@ curl -fsSL -o install.sh https://raw.githubusercontent.com/Homebrew/install/HEAD
 
 Run the following command to source linuxbrew
 ```sh
-echo 'eval "$(/home/sammy/.linuxbrew/bin/brew shellenv)"' >> .bash_extra
-eval "$(/home/sammy/.linuxbrew/bin/brew shellenv)"
+echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"' >> .bash_extra
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 ```
 
 After installing, linuxbrew it's recommended that you install the following packages
