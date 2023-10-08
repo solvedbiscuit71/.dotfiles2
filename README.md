@@ -95,18 +95,9 @@ fc-cache -f -v
 brew install bash fish
 ```
 
-### macOS
-
 ```sh
-echo '/opt/homebrew/bin/bash' | sudo tee -a /etc/shells
-chsh -s /opt/homebrew/bin/bash
-```
-
-### linux
-
-```sh
-echo '/home/linuxbrew/.linuxbrew/bin/bash' | sudo tee -a /etc/shells
-chsh -s /home/linuxbrew/.linuxbrew/bin/bash
+echo '$HOMEBREW_PREFIX/bin/bash' | sudo tee -a /etc/shells
+chsh -s $HOMEBREW_PREFIX/bin/bash
 ```
 
 For adding environment variable based on your development setup without cluttering your .bashrc or config.fish
@@ -121,11 +112,19 @@ echo set completion-ignore-case on | sudo tee -a /etc/inputrc
 
 One caveats is to add the following line to your ~/.bash_extra
 ```sh
-# macos
-[[ -r "/opt/homebrew/etc/profile.d/bash_completion.sh" ]] && . "/opt/homebrew/etc/profile.d/bash_completion.sh"
+[[ -r "$HOMEBREW_PREFIX/etc/profile.d/bash_completion.sh" ]] && . "$HOMEBREW_PREFIX/etc/profile.d/bash_completion.sh"
+```
 
-# linux
-[[ -r "/home/linuxbrew/.linuxbrew/etc/profile.d/bash_completion.sh" ]] && . "/home/linuxbrew/.linuxbrew/etc/profile.d/bash_completion.sh"
+#### An example .bash_extra
+```sh
+# enable autocd
+shopt -s autocd
+
+# alias
+alias t="tmux"
+
+# jump config
+eval "$(jump shell bash)"
 ```
 
 ### Terminal emulator
@@ -199,6 +198,12 @@ brew install nnn
 lazygit is a terminal based git client, we use the alias `g` for invoke lazygit
 ```sh
 brew install lazygit
+```
+
+# Terminal multiplexer
+tmux is a terminal multiplexer used to create multiple windows and panels which persists as session
+```sh
+brew install tmux
 ```
 
 ## Tiling window manager
