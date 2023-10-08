@@ -81,8 +81,8 @@ ligature and italics (though it doesn't have nerd-icon)
 
 After downloading the victor-mono.zip file, extract and move all the files inside TTF directory to ~/.local/share/fonts
 ```sh
-sudo cp ~/Download/TTF/* ~/.local/share/fonts       # To make it available current user
-sudo cp ~/Download/TTF/* /usr/local/share/fonts     # To make it available system-wide
+mkdir -p $HOME/.local/share/fonts
+sudo cp $HOME/Downloads/TTF/* $HOME/.local/share/fonts
 ```
 
 And then refresh system's cache or restart your system
