@@ -74,12 +74,12 @@ python3 .script/deinit.py
 
 ## Font family
 
-I personally like to use [Victor Mono](https://rubjo.github.io/victor-mono/) which has all the modern features such an font
-ligature and italics (though it doesn't have nerd-icon)
+I personally like to use [VictorMono Nerd Font](https://github.com/ryanoasis/nerd-fonts/releases/download/v3.0.2/VictorMono.zip)
+which has all the modern features such an font ligature, italics and nerd icons.
 
 ### Linux (only)
 
-After downloading the victor-mono.zip file, extract and move all the files inside TTF directory to ~/.local/share/fonts
+After downloading the VictorMono.zip file, extract and move all the files inside TTF directory to ~/.local/share/fonts
 ```sh
 mkdir -p $HOME/.local/share/fonts
 sudo cp $HOME/Downloads/TTF/* $HOME/.local/share/fonts
