@@ -255,3 +255,28 @@ yabai -m rule --add app="^Archive Utility\$" manage=off
 yabai -m rule --add app="^Digital Colour Meter\$" manage=off sticky=on
 yabai -m rule --add app="^Finder\$" manage=off
 ```
+
+## Statusbar
+
+SketchyBar is a highly customisable status bar which use shell script for providing data
+to the status bar
+
+To install sketchbar, run
+```sh
+brew tap FelixKratz/formulae
+brew install sketchybar
+```
+
+To start sketchbar, run
+```sh
+brew services start sketchybar
+```
+
+### Hiding the original macOS bar
+
+In macOS Ventura,  
+To hide the default macOS menu bar, navigate to System & Settings -> Desktop & Dock -> _Automatically hide and show the menu bar_ -> _Always_
+
+
+In macOS Sonoma,  
+To hide the default macOS menu bar, navigate to System & Settings -> Control Center -> _Automatically hide and show the menu bar_ -> _Always_
