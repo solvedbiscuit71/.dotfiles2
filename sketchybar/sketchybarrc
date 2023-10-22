@@ -1,24 +1,36 @@
 PLUGIN_DIR="$CONFIG_DIR/plugins"
 
-##### Bar Appearance #####
 sketchybar --bar height=24          \
-                 blur_radius=32     \
-                 position=top       \
-                 sticky=off         \
-                 color=0x15ffffff   \
-                 topmost=window
+                 sticky=on          \
+                 color=0x803d4250   \
+                 padding_left=0     \
+                 padding_right=12   \
+                 topmost=off
 
-##### Changing Defaults #####
 sketchybar --default icon.font="VictorMono Nerd Font:Bold:16.0"     \
-                     icon.color=0xffffffff                          \
-                     label.font="VictorMono Nerd Font:Bold:14.0"    \
-                     label.color=0xffffffff                         \
+                     label.font="VictorMono Nerd Font:Bold:16.0"    \
                      label.padding_left=4                           \
-                     label.padding_right=10                         \
-                     icon.padding_left=10                           \
-                     icon.padding_right=4
+                     label.padding_right=0                          \
+                     label.color=0x96e6e9ef                         \
+                     icon.padding_left=0                            \
+                     icon.padding_right=4                           \
+                     background.padding_left=24                     \
+                     background.padding_rigth=24                    \
+                     icon.color=0x96e6e9ef
 
-##### Adding Left Items #####
+sketchybar --add item front_app left                                            \
+           --set front_app       script="$PLUGIN_DIR/front_app.sh"              \
+                                 icon.drawing=off                               \
+                                 background.height=24                           \
+                                 background.color=0xff87a0be                    \
+                                 background.padding_left=0                      \
+                                 background.padding_rigth=0                     \
+                                 label.color=0xff464c5b                         \
+                                 label.padding_left=12                          \
+                                 label.padding_right=12                         \
+                                 label.font="VictorMono Nerd Font:Bold:16"      \
+           --subscribe front_app front_app_switched
+
 SPACE_ICONS=("1" "2" "3" "4" "5" "6" "7" "8" "9" "10")
 
 for i in "${!SPACE_ICONS[@]}"
@@ -27,11 +39,12 @@ do
   sketchybar --add space space.$sid left                                 \
              --set space.$sid space=$sid                                 \
                               icon=${SPACE_ICONS[i]}                     \
-                              icon.padding_left=8                        \
-                              icon.padding_right=8                       \
-                              background.color=0x44ffffff                \
-                              background.padding_right=4                 \
-                              background.padding_left=4                  \
+                              icon.padding_left=12                       \
+                              icon.padding_right=12                      \
+                              icon.color=0x96e6e9ef                      \
+                              background.color=0x80464c5b                \
+                              background.padding_right=0                 \
+                              background.padding_left=0                  \
                               background.height=24                       \
                               background.drawing=off                     \
                               label.drawing=off                          \
@@ -39,26 +52,21 @@ do
                               click_script="yabai -m space --focus $sid"
 done
 
-##### Adding Center Items #####
-sketchybar --add item front_app center                             \
-           --set front_app       script="$PLUGIN_DIR/front_app.sh" \
-                                 icon.drawing=off                  \
-           --subscribe front_app front_app_switched
-
-##### Adding Right Items #####
 sketchybar --add item clock right                              \
            --set clock   update_freq=10                        \
                          icon=󰃰                                \
+                         icon.color=0x96e6e9ef                 \
                          script="$PLUGIN_DIR/clock.sh"         \
                                                                \
            --add item volume right                             \
            --set volume  script="$PLUGIN_DIR/volume.sh"        \
+                         icon.color=0x96e6e9ef                 \
            --subscribe volume volume_change                    \
                                                                \
            --add item battery right                            \
            --set battery script="$PLUGIN_DIR/battery.sh"       \
+                         icon.color=0x96e6e9ef                 \
                          update_freq=120                       \
            --subscribe battery system_woke power_source_change
 
-##### Finalizing Setup #####
 sketchybar --update
