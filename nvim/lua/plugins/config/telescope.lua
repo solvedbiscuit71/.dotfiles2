@@ -5,7 +5,7 @@ local opts = { silent = true }
 -- Load telescope
 require('telescope').setup {
     defaults = {
-        disable_devicons = true,
+        disable_devicons = false,
         file_ignore_patterns = {
             '^.git/',
             '^node_modules/',
@@ -15,7 +15,8 @@ require('telescope').setup {
         find_files = {
             follow = true,
             hidden = true,
-            no_ignore = false,
+            no_ignore = true,
+            no_ignore_parent = true,
         },
     },
 }
@@ -24,4 +25,6 @@ require('telescope').setup {
 require('telescope').load_extension('yank_history')
 
 vim.keymap.set('n', '<leader>f', builtin.find_files, opts)
-vim.keymap.set('n', '<leader>g', builtin.live_grep, opts)
+vim.keymap.set('n', '<leader>g', builtin.git_files, opts)
+vim.keymap.set('n', '<leader>b', builtin.buffers, opts)
+vim.keymap.set('n', '<leader>/', builtin.live_grep, opts)

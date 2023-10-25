@@ -5,6 +5,9 @@ return require('packer').startup(function(use)
     -- Colorscheme
     use 'shaunsingh/nord.nvim'
 
+    -- Icon
+    use 'nvim-tree/nvim-web-devicons'
+
     -- Statusline
     use 'nvim-lualine/lualine.nvim'
 
