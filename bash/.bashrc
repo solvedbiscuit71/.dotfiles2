@@ -23,11 +23,7 @@ else
     alias n="nnn -CH -e"
     alias l="lsd -1"
     alias q="exit"
-
-    alias s="tmux list-session"
-    alias k="tmux kill-session -t "
-    alias ka="tmux kill-server"
-
+    alias c="clear"
 
     # bash completion
     [[ -r "/opt/homebrew/etc/profile.d/bash_completion.sh" ]] && . "/opt/homebrew/etc/profile.d/bash_completion.sh"
