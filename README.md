@@ -217,6 +217,22 @@ tmux is a terminal multiplexer used to create multiple windows and panels which 
 brew install tmux
 ```
 
+## Fzf
+
+The tmux plugin used tmux-fzf need fzf for proper functionality, install fzf using homebrew
+```
+brew install fzf
+```
+
+## Tmux plugin manager
+
+To install the tmux plugin manager run,
+```bash
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+```
+
+After, installing the plugin manager create a new tmux session and enter `<C-b> I` to install the plugins
+
 ## Tiling window manager
 
 ```sh
