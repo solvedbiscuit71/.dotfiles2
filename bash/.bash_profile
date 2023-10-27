@@ -18,18 +18,15 @@ else
     shopt -s autocd
 
     # alias
-    alias v="nvim"
-    alias g="lazygit"
-    alias n="nnn -CH -e"
-    alias l="lsd -1 --icon never"
-    alias q="exit"
-    alias c="clear"
+    alias nnn="nnn -CH -e"
+    alias ls="ls -A"
+	alias vim="nvim ."
 
     # bash completion
     [[ -r "/opt/homebrew/etc/profile.d/bash_completion.sh" ]] && . "/opt/homebrew/etc/profile.d/bash_completion.sh"
 
     # extra
-    if [ -f $HOME/.bash_extra ]; then
-        source $HOME/.bash_extra
+    if [ -f $HOME/.extra ]; then
+        source $HOME/.extra
     fi
 fi

@@ -1,12 +1,7 @@
-require 'core.plugins.config.autopairs'
-require 'core.plugins.config.comment'
-require 'core.plugins.config.hop'
+require('nvim-autopairs').setup {}
+require('Comment').setup {}
+require('nvim-surround').setup {}
+
 require 'core.plugins.config.lualine'
-require 'core.plugins.config.mason'
-require 'core.plugins.config.nnn'
 require 'core.plugins.config.nord'
 require 'core.plugins.config.substitute'
-require 'core.plugins.config.surround'
-require 'core.plugins.config.telescope'
-require 'core.plugins.config.treesitter'
-require 'core.plugins.config.undotree'
