@@ -169,18 +169,7 @@ neovim is the best text editor (in my opinion) for the terminal. we use the alia
 brew install neovim
 ```
 
-We need to download the plugin manager for neovim (i.e Packer) before entering into neovim
-```sh
-git clone --depth 1 https://github.com/wbthomason/packer.nvim \
-    ~/.local/share/nvim/site/pack/packer/start/packer.nvim
-```
-
-If :PackerInstall command is not available, execute
-```vim
-:source ~/.config/nvim/lua/plugins/init.lua
-```
-
-For configuring your lsp, create a server.lua inside the lsp folder which will be automatically sourced
+You can use `:Mason` to install lsp and create a file `nvim/lua/core/lsp_config/server.lua` to config the installed as such,
 ```lua
 local lspconfig = require('lspconfig')
 local capabilities = require('cmp_nvim_lsp').default_capabilities()

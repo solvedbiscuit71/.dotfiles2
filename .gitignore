@@ -7,7 +7,7 @@ nvim/plugin/*
 .DS_Store
 fish/fish_variables
 fish/custom_config.fish
-nvim/lua/plugins/lsp/server.lua
+nvim/lua/core/lsp_config/server.lua
 
 !.script/init.py
 !.script/deinit.py

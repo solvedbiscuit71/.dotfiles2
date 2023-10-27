@@ -1,4 +1,5 @@
 require('nvim-treesitter.configs').setup {
+    ensure_installed = { 'lua', 'markdown', 'yaml', 'bash', 'gitignore', 'json', 'query' },
     auto_install = true,
 
     highlight = {

@@ -1,10 +1,7 @@
 -- loading vim configuration
-require 'plugins'
+require 'core'
 
-require 'options'
-require 'keybinds'
+require 'core.plugins'
+require 'core.plugins.config'
 
-require 'plugins.lsp'
-require 'plugins.config'
-
-require 'custom_commands'
+require 'core.lsp_config'

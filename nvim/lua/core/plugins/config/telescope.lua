@@ -21,10 +21,13 @@ require('telescope').setup {
     },
 }
 
--- load extensions
-require('telescope').load_extension('yank_history')
+vim.keymap.set('n', '<leader>ff', builtin.find_files, opts)
+vim.keymap.set('n', '<leader>fg', builtin.git_files, opts)
+vim.keymap.set('n', '<leader>fb', builtin.buffers, opts)
+vim.keymap.set('n', '<leader>fr', builtin.oldfiles, opts)
 
-vim.keymap.set('n', '<leader>f', builtin.find_files, opts)
-vim.keymap.set('n', '<leader>g', builtin.git_files, opts)
-vim.keymap.set('n', '<leader>b', builtin.buffers, opts)
-vim.keymap.set('n', '<leader>/', builtin.live_grep, opts)
+vim.keymap.set('n', '<leader>f*', builtin.grep_string, opts)
+vim.keymap.set('n', '<leader>f/', builtin.live_grep, opts)
+
+vim.keymap.set('n', '<leader>lr', builtin.lsp_references, opts)
+vim.keymap.set('n', '<leader>lt', builtin.treesitter, opts)

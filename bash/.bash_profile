@@ -21,7 +21,7 @@ else
     alias v="nvim"
     alias g="lazygit"
     alias n="nnn -CH -e"
-    alias l="lsd -1"
+    alias l="lsd -1 --icon never"
     alias q="exit"
     alias c="clear"
 

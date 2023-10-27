@@ -1,8 +1,7 @@
 require('substitute').setup {
-    on_substitute = require('yanky.integration').substitute(),
     yank_substituted_text = false,
     highlight_substituted_text = {
-        enabled = false,
+        enabled = true,
         timer = 0,
     },
 }

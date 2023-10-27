@@ -1,4 +1,4 @@
--- neovim config
+-- options
 vim.opt.autoindent = true
 vim.opt.autoread = true
 vim.opt.background = 'dark'
@@ -32,20 +32,17 @@ vim.opt.updatetime = 300
 vim.opt.wrap = false
 vim.opt.writebackup = false
 
--- plugins config
-vim.g.nord_contrast = false
-vim.g.nord_borders = true
-vim.g.nord_disable_background = true
-vim.g.nord_italic = false
-vim.g.nord_uniform_diff_background = true
-vim.g.nord_bold = false
+-- keymap
+local opts = { silent = true }
 
--- colorscheme
-vim.api.nvim_command('colorscheme nord')
-vim.api.nvim_command('hi Normal guibg=NONE ctermbg=NONE')
+vim.g.mapleader = ' '
 
--- terminal
-vim.api.nvim_command("autocmd TermOpen * startinsert")
-vim.api.nvim_command("autocmd TermOpen * setlocal nonumber norelativenumber")
-vim.api.nvim_command("autocmd TermOpen * nnoremap <buffer> <C-c> i<C-c>")
-vim.api.nvim_command("autocmd TermEnter * setlocal signcolumn=no")
+vim.keymap.set('n', '<C-b>', '<C-^>', opts)
+vim.keymap.set('n', '<leader>q', ':qa<CR>', opts)
+vim.keymap.set('n', '<leader>w', ':wa<CR>', opts)
+vim.keymap.set('n', '<leader>d', ':bd!<CR>', opts)
+
+vim.keymap.set('v', '>', '>gv', opts)
+vim.keymap.set('v', '<', '<gv', opts)
+
+vim.keymap.set({'n','o','x'}, '<leader>a', ':<C-u>normal! ggVG<CR>', opts)
