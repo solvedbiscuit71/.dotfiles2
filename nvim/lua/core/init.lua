@@ -20,10 +20,14 @@ vim.opt.wrap = false
 vim.g.mapleader = ' '
 
 vim.keymap.set('n', '<C-b>', '<C-^>', opts)
-vim.keymap.set('n', '<leader>n', '<CMD>Ex<CR>', opts)
+vim.keymap.set('n', '<leader>n', ':Ex<CR>', opts)
 
-vim.keymap.set('v', '>', '>gv', opts)
-vim.keymap.set('v', '<', '<gv', opts)
+vim.keymap.set('v', '>', '>gv')
+vim.keymap.set('v', '<', '<gv')
 
-vim.keymap.set({'n','o','x'}, 'ga', '<CMD><C-u>normal! ggVG<CR>', opts)
-vim.keymap.set('n', 'gh', '<CMD>nohls<CR>', opts)
+vim.keymap.set({'n','o','x'}, 'gA', ':<C-u>normal! ggVG<CR>')
+vim.keymap.set('n', 'gh', ':set hlsearch<CR>')
+vim.keymap.set('n', 'gH', ':set nohlsearch<CR>')
+
+vim.keymap.set('n', '<C-k>', ':cprev<CR>')
+vim.keymap.set('n', '<C-j>', ':cnext<CR>')
