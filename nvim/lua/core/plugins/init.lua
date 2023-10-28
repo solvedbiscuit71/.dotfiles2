@@ -22,6 +22,8 @@ return require('packer').startup(function(use)
     use { 'shaunsingh/nord.nvim' }
     use { 'gbprod/substitute.nvim' }
     use { 'kylechui/nvim-surround', tag = '*' }
+	use { 'nvim-telescope/telescope.nvim', tag = '0.1.4', requires = { {'nvim-lua/plenary.nvim'} }
+}
 
     if packer_bootstrap then
         require('packer').sync()

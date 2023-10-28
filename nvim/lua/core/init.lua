@@ -25,9 +25,9 @@ vim.keymap.set('n', '<leader>n', ':Ex<CR>', opts)
 vim.keymap.set('v', '>', '>gv')
 vim.keymap.set('v', '<', '<gv')
 
-vim.keymap.set({'n','o','x'}, 'gA', ':<C-u>normal! ggVG<CR>')
-vim.keymap.set('n', 'gh', ':set hlsearch<CR>')
-vim.keymap.set('n', 'gH', ':set nohlsearch<CR>')
+vim.keymap.set({'n','o','x'}, 'ga', ':<C-u>normal! ggVG<CR>')
+vim.keymap.set('n', 'gh', ':set nohlsearch<CR>')
+vim.keymap.set('n', 'gH', ':set hlsearch<CR>')
 
 vim.keymap.set('n', '<C-k>', ':cprev<CR>')
 vim.keymap.set('n', '<C-j>', ':cnext<CR>')

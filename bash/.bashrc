@@ -16,7 +16,7 @@ shopt -s autocd
 # alias
 alias nnn="nnn -CH -e"
 alias ls="ls -A"
-alias vim="nvim ."
+alias vim="nvim"
 
 # bash completion
 [[ -r "/opt/homebrew/etc/profile.d/bash_completion.sh" ]] && . "/opt/homebrew/etc/profile.d/bash_completion.sh"
