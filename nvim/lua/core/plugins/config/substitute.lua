@@ -15,4 +15,9 @@ vim.keymap.set('x', 'gx', require('substitute.exchange').visual, { noremap = tru
 vim.keymap.set('n', 'gxx', require('substitute.exchange').line, { noremap = true })
 vim.keymap.set('n', 'gr', require('substitute.range').operator, { noremap = true })
 vim.keymap.set('x', 'gr', require('substitute.range').visual, { noremap = true })
-vim.keymap.set('n', 'gR', require('substitute.range').word, { noremap = true })
+vim.keymap.set('n', 'gR', function()
+	require('substitute.range').operator({
+		subject = {motion='iw'},
+		range = {motion='ga'}
+	})
+end, { noremap = true })
