@@ -1,27 +1,41 @@
 # PATH
-export PATH=/opt/homebrew/bin:/opt/homebrew/sbin:$HOME/.dotfiles2/.script:$PATH
+export PATH=$HOME/.dotfiles3/.script:$PATH
 
-# .env
-export PS1="\[\e[32m\]\u\[\e[m\]@\h \[\e[34m\]\W\[\e[m\] \\$ "
-export VISUAL=nvim
+if [[ "$OSTYPE" == "linux-gnu"* ]]; then
+	eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+	[[ -r "/home/linuxbrew/.linuxbrew/etc/profile.d/bash_completion.sh" ]] && . "/home/linuxbrew/.linuxbrew/etc/profile.d/bash_completion.sh"
 
-# bash
-HISTCONTROL=ignorespace
-HISTFILESIZE=
-HISTSIZE=
-HISTTIMEFORMAT="%F %T "
-stty -ixon
-shopt -s autocd
+elif [[ "$OSTYPE" == "darwin"* ]]; then
+	export PATH="/opt/homebrew/bin:/opt/homebrew/sbin:$PATH"
+	[[ -r "/opt/homebrew/etc/profile.d/bash_completion.sh" ]] && . "/opt/homebrew/etc/profile.d/bash_completion.sh"
 
-# alias
-alias nnn="nnn -CH -e"
-alias ls="ls -A"
-alias vim="nvim"
+else
+	echo "Unknown OS: $OSTYPE"
+fi
 
-# bash completion
-[[ -r "/opt/homebrew/etc/profile.d/bash_completion.sh" ]] && . "/opt/homebrew/etc/profile.d/bash_completion.sh"
+if [[ -z "$TMUX" ]]; then
+	tmux new-session -A -s main
+else
+	# .env
+	export PS1="\[\e[32m\]\u\[\e[m\]@\h \[\e[34m\]\W\[\e[m\] \\$ "
+	export VISUAL=nvim
 
-# extra
-if [ -f $HOME/.extra ]; then
-    source $HOME/.extra
+	# bash
+	HISTCONTROL=ignorespace
+	HISTFILESIZE=
+	HISTSIZE=
+	HISTTIMEFORMAT="%F %T "
+	stty -ixon
+	shopt -s autocd
+	eval "$(jump shell bash)"
+
+	# alias
+	alias nnn="nnn -CH -e"
+	alias ls="ls -A"
+	alias vim="nvim"
+
+	# extra
+	if [ -f $HOME/.extra ]; then
+		source $HOME/.extra
+	fi
 fi

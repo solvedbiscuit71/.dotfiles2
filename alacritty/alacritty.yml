@@ -15,7 +15,7 @@ window:
   dynamic_title: false
   opacity: 0.92
   decorations: buttonless
-  startup_mode: Windowed
+  startup_mode: Maximized
 
 # Mouse Setting
 mouse:
