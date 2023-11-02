@@ -24,6 +24,7 @@ return require('packer').startup(function(use)
     use { 'kylechui/nvim-surround', tag = '*' }
 	use { 'nvim-telescope/telescope.nvim', tag = '0.1.4', requires = {{'nvim-lua/plenary.nvim'}}}
 	use { 'phaazon/hop.nvim', branch = 'v2' }
+	use { 'nvim-treesitter/nvim-treesitter' }
 
     if packer_bootstrap then
         require('packer').sync()
