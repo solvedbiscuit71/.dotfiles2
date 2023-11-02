@@ -4,10 +4,6 @@ require('telescope').setup {
     defaults = {
     	layout_strategy = 'vertical',
       	layout_config = { height = 0.5, width = 0.5 },
-        file_ignore_patterns = {
-            '^.git/',
-            '^node_modules/',
-        },
     },
     pickers = {
         find_files = {
