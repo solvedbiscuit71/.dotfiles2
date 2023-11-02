@@ -1,13 +1,9 @@
+.git/*
 .script/*
 .backup/*
-fish/conf.d/*
-fish/functions/__z*
-nvim/plugin/*
 
 .DS_Store
-fish/fish_variables
-fish/custom_config.fish
-nvim/lua/core/lsp_config/server.lua
+nvim/plugin/*
 
 !.script/init.py
 !.script/deinit.py
