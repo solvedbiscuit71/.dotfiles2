@@ -1,5 +1,5 @@
 # PATH
-export PATH=$HOME/.dotfiles3/.script:$PATH
+export PATH=$HOME/.dotfiles2/.script:$PATH
 
 if [[ "$OSTYPE" == "linux-gnu"* ]]; then
 	eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
@@ -15,6 +15,7 @@ fi
 
 if [[ -z "$TMUX" ]]; then
 	tmux new-session -A -s main
+	exit
 else
 	# .env
 	export PS1="\[\e[32m\]\u\[\e[m\]@\h \[\e[34m\]\W\[\e[m\] \\$ "
@@ -22,8 +23,8 @@ else
 
 	# bash
 	HISTCONTROL=ignorespace
-	HISTFILESIZE=
-	HISTSIZE=
+	HISTFILESIZE=10000
+	HISTSIZE=2000
 	HISTTIMEFORMAT="%F %T "
 	stty -ixon
 	shopt -s autocd
