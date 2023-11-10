@@ -33,7 +33,7 @@ curl -fsSL -o install.sh https://raw.githubusercontent.com/Homebrew/install/HEAD
 
 1. Homebrew
 ```sh
-export PATH="/opt/homebrew/bin/brew:$PATH"
+eval "$(/opt/homebrew/bin/brew shellenv)"
 ```
 
 2. Linuxbrew
