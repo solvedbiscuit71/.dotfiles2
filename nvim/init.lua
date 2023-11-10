@@ -33,14 +33,8 @@ end
 local packer_bootstrap = ensure_packer()
 
 require('packer').startup(function(use)
-	use { 'wbthomason/packer.nvim' }
-
-	use { 
-		'gbprod/nord.nvim',
-		config = function()
-			require('nord').setup({})
-		end
-	}
+	use 'wbthomason/packer.nvim'
+	use 'shaunsingh/nord.nvim'
 
 	use { 
 		'nvim-treesitter/nvim-treesitter',
@@ -163,6 +157,7 @@ end)
 
 
 vim.api.nvim_command('colorscheme nord')
+vim.api.nvim_command('hi Normal guibg=NONE ctermbg=NONE')
 
 
 vim.keymap.set('n', '<leader>n', ':Ex<CR>')
