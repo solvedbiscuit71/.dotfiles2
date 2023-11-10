@@ -1,6 +1,6 @@
 # Prerequisites
 
-## maOS
+## macOS
 
 We need to install a few packages before setup,
 1. Developer Toolkit
@@ -108,4 +108,13 @@ python3 .script/init.py
 ## Uninstall
 ```sh
 python3 .script/deinit.py
+```
+
+# Postrequisites
+
+## Disable dock delay (macOS)
+
+To disable to delay in automatically show and hide dock, run the command in terminal
+```sh
+defaults write com.apple.Dock autohide-delay -float 0 && killall Dock
 ```
