@@ -33,18 +33,22 @@ os.mkdir('.backup')
 """
 moving existing config to .backup
 """
-for folder in config_folders:
-    dst = f"{CONFIG}{folder}"
+if os.path.isdir(CONFIG):
+    for folder in config_folders:
+        dst = f"{CONFIG}{folder}"
 
-    if folder not in config_files and os.path.isdir(dst) and not os.path.islink(dst):
-        print(f"move {dst} to .backup")
-        shutil.move(dst, '.backup')
+        if folder not in config_files and os.path.isdir(dst) and not os.path.islink(dst):
+            print(f"move {dst} to .backup")
+            shutil.move(dst, '.backup')
 
-for files in config_files.values():
-    for file in files:
-        if os.path.isfile(f"{HOME}{file}") and not os.path.islink(f"{HOME}{file}"):
-            print(f"move {file} to .backup")
-            shutil.move(f"{HOME}{file}", '.backup')
+    for files in config_files.values():
+        for file in files:
+            if os.path.isfile(f"{HOME}{file}") and not os.path.islink(f"{HOME}{file}"):
+                print(f"move {file} to .backup")
+                shutil.move(f"{HOME}{file}", '.backup')
+else:
+    print("creating ~/.config")
+    os.mkdir(CONFIG)
 
 """
 linking .dotfiles2
