@@ -4,11 +4,9 @@ export PATH=$HOME/.dotfiles2/.script:$PATH
 if [[ "$OSTYPE" == "linux-gnu"* ]]; then
 	eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 	[[ -r "/home/linuxbrew/.linuxbrew/etc/profile.d/bash_completion.sh" ]] && . "/home/linuxbrew/.linuxbrew/etc/profile.d/bash_completion.sh"
-
 elif [[ "$OSTYPE" == "darwin"* ]]; then
 	export PATH="/opt/homebrew/bin:/opt/homebrew/sbin:$PATH"
 	[[ -r "/opt/homebrew/etc/profile.d/bash_completion.sh" ]] && . "/opt/homebrew/etc/profile.d/bash_completion.sh"
-
 else
 	echo "Unknown OS: $OSTYPE"
 fi

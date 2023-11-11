@@ -19,11 +19,11 @@ set keymap vi-insert
 "\e[B": history-search-forward
 $endif
 
-set colored-stats On
-set visible-stats On
-set mark-symlinked-directories On
-set colored-completion-prefix On
-set menu-complete-display-prefix On
-
-set show-all-if-ambiguous on
+set colored-completion-prefix on
+set colored-stats on
+set completion-ignore-case on
 set echo-control-characters off
+set mark-symlinked-directories on
+set menu-complete-display-prefix on
+set show-all-if-ambiguous on
+set visible-stats on
