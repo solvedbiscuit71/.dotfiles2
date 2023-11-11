@@ -161,8 +161,8 @@ vim.api.nvim_command('hi Normal guibg=NONE ctermbg=NONE')
 
 
 vim.keymap.set('n', '<leader>n', ':Ex<CR>')
-vim.keymap.set('n', '<leader>f', require('telescope.builtin').find_files, {})
-vim.keymap.set('n', '<leader>b', require('telescope.builtin').buffers, {})
+vim.keymap.set('n', '<leader>f', require('telescope.builtin').find_files)
+vim.keymap.set('n', '<leader>b', require('telescope.builtin').buffers)
 vim.keymap.set('n', '<leader>s', function ()
 	require('telescope.builtin').grep_string({
 		search = vim.fn.input("> "),
@@ -171,7 +171,7 @@ vim.keymap.set('n', '<leader>s', function ()
 	})
 end)
 
-vim.keymap.set('n', 'go', ':HopChar1<CR>')
+vim.keymap.set({'n','x','o'}, 'go', ':HopChar1<CR>')
 vim.keymap.set('n', 'gs', require('substitute').operator, { noremap = true })
 vim.keymap.set('n', 'gss', require('substitute').line, { noremap = true })
 vim.keymap.set('n', 'gS', require('substitute').eol, { noremap = true })
@@ -182,10 +182,9 @@ vim.keymap.set('n', 'gxx', require('substitute.exchange').line, { noremap = true
 vim.keymap.set('n', 'gr', require('substitute.range').operator, { noremap = true })
 vim.keymap.set('x', 'gr', require('substitute.range').visual, { noremap = true })
 
-vim.keymap.set('n', 'gh', ':set nohlsearch<CR>')
-vim.keymap.set('n', 'gH', ':set hlsearch<CR>')
-vim.keymap.set({'n','o','x'}, 'ga', ':<C-u>normal! ggVG<CR>')
-vim.keymap.set({'n','v'}, 'gy', '"+y')
+vim.keymap.set('n', 'gh', ':set hlsearch!<CR>')
+vim.keymap.set({'n','x','o'}, 'ga', ':<C-u>normal! ggVG<CR>')
+vim.keymap.set({'n','x'}, 'gy', '"+y')
 
 vim.keymap.set('n', '<C-b>', '<C-^>')
 vim.keymap.set('n', '<C-k>', ':cprev<CR>')
