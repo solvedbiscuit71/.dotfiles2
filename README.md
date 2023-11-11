@@ -44,7 +44,7 @@ eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 # Installation
 
 ```sh
-brew install bash fzf gcc git jump lazygit neovim python3 tmux
+brew install bash bash-completion fzf gcc git jump lazygit neovim nnn python3 tmux
 ```
 
 ## Nerd Font
