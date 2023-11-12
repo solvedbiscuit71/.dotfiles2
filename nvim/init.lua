@@ -7,6 +7,7 @@ vim.opt.mouse = 'a'
 vim.opt.pumheight = 10
 vim.opt.number = true
 vim.opt.relativenumber = true
+vim.opt.scrolloff = 999
 vim.opt.shell = '/bin/sh'
 vim.opt.shiftwidth = 4
 vim.opt.smartindent = true
