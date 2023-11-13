@@ -118,3 +118,10 @@ To disable to delay in automatically show and hide dock, run the command in term
 ```sh
 defaults write com.apple.Dock autohide-delay -float 0 && killall Dock
 ```
+
+## Tiling window manager (macOS)
+
+For tiling window management use Amethyst and for displaying the space number use SpaceId
+```
+brew install --cask amethyst spaceid
+```
